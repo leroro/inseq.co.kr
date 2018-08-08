@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'NanumS';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/NanumSquareR.eot);
+	src: url(fonts/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+	url(fonts/NanumSquareR.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NanumS';
+	font-style: normal;
+	font-weight: 600;
+	src: url(fonts/NanumSquareB.eot);
+	src: url(fonts/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+	url(fonts/NanumSquareB.woff) format('woff');
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	word-break: keep-all;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	font-family: 'NanumS', 'Malgun Gothic', sans-serif, Arial, Dotum, Gulim, Verdana, Tahoma;
+}
+
+header,
+section,
+article,
+aside,
+footer,
+nav {
+	display: block;
+}
+
+fieldset {
+	display: block;
+	border: 0;
+	padding: 0;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+strong,
+b {
+	font-weight: 600;
+}
+
+a,
+select,
+button,
+input,
+textarea {
+	font-family: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+button,
+input[type=submit] {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	background: transparent;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.tts {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+}
+
+caption.tts {
+	position: static;
+	width: auto;
+	height: 0;
+}
+
+body {
+	background-color: #333;
+}
+
+#wrap {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	height: 200px;
+	margin: -210px 0 0 0;
+	text-align: center;
+}
+
+.logo {
+	width: 285px;
+	margin: auto;
+	background-color: #f49ac0;
+}
+
+.logo img {
+	display: block;
+	width: 100%;
+	margin: auto;
+}
+
+.slogan {
+	margin-top: 15px;
+	color: #999;
+	font-size: 19px;
+}
+
+.slogan strong {
+	color: #fff;
+}
+
+.help {
+	margin-top: 50px;
+}
+
+.help a {
+	color: #fff;
+	font-size: 30px;
+	border-bottom: 1px solid #999;
+	transition-duration: .2s;
+}
+
+.help a:hover {
+	color: #f49ac0;
+	border-bottom-color: #f49ac0;
+}
