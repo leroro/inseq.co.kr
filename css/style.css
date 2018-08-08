@@ -136,12 +136,54 @@ body {
 }
 
 .logo {
+	position: relative;
 	width: 285px;
 	margin: auto;
+	overflow: hidden;
+	background-color: #77cccd;
+}
+
+.logo:before {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 100%;
+	content: '';
 	background-color: #f49ac0;
+	animation: logoFade 10s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes logoFade {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+@keyframes logoFill {
+	0% {
+		transform: translateY(100%);
+		-webkit-transform: translateY(100%);
+	}
+	50% {
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100%);
+		-webkit-transform: translateY(-100%);
+	}
 }
 
 .logo img {
+	position: relative;
 	display: block;
 	width: 100%;
 	margin: auto;
