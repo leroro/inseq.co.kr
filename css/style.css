@@ -264,11 +264,15 @@ body {
 }
 
 .contact-us {
-	border: 0;
-	width: 100%;
 	height: calc(100% - 60px);
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+}
+
+.contact-us iframe {
+	width: 100%;
+	height: calc(100% + 1px);
+	border: 0;
 }
 
 #plusfriend-addfriend-button {
