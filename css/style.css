@@ -150,7 +150,7 @@ body {
 .logo {
 	position: relative;
 	margin: auto;
-	background-color: #77cccd;
+	background-color: #f49ac0;
 	overflow: hidden;
 }
 
@@ -162,7 +162,7 @@ body {
 	right: 0;
 	bottom: 0;
 	content: '';
-	background-color: #f49ac0;
+	background-color: #77cccd;
 	animation: logoFade 10s;
 	animation-direction: alternate;
 	animation-iteration-count: infinite;
@@ -214,7 +214,8 @@ body {
 .btn-help a {
 	color: #fff;
 	font-size: 30px;
-	border-bottom: 1px solid #999;
+	line-height: 1.5;
+	border-bottom: 2px solid #999;
 	transition-duration: .2s;
 }
 
