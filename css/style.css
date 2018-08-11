@@ -246,7 +246,6 @@ body {
 }
 
 .help {
-	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -254,7 +253,19 @@ body {
 	bottom: 0;
 	line-height: 60px;
 	background-color: #333;
+	transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	transition-duration: .4s;
+	-webkit-transition-duration: .4s;
+	transition-timing-function: ease-out;
+	-webkit-transition-timing-function: ease-out;
 }
+
+.help.opened {
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
+}
+
 
 .help-title {
 	position: relative;

@@ -39,12 +39,12 @@
 	});
 	$('.btn-help a').on('click', function() {
 		// var tg = $(this).attr('href')
-		$('.help').fadeIn('fast');
+		$('.help').addClass('opened');
 		/*setTimeout(function() { location.href = '' + tg + '' }, 1000);*/
 		return false;
 	});
 	$('.help-title a').on('click', function() {
-		$('.help').fadeOut('fast');
+		$('.help').removeClass('opened');
 	});
 </script>
 <!-- Google Analytics -->
