@@ -292,8 +292,10 @@ body {
 }
 
 .ios .contact-us iframe {
+	position: relative;
 	width: 100vw;
 	height: calc(100% + 1px);
+	-webkit-transform: translate3d(0, 0, 0);
 }
 
 #plusfriend-addfriend-button {
