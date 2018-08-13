@@ -251,8 +251,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	line-height: 60px;
-	background-color: #333;
+	background-color: #f6f6f6;
 	transform: translateY(100%);
 	-webkit-transform: translateY(100%);
 	transition-duration: .4s;
@@ -266,26 +265,34 @@ body {
 	-webkit-transform: translateY(0);
 }
 
-
 .help-title {
 	position: relative;
-	max-width: 640px;
 	color: #fff;
 	font-weight: 600;
 	font-size: 22px;
-	padding-left: 20px;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 50px;
+	background-color: #333;
 }
 
 .contact-us {
 	height: calc(100vh - 60px);
+}
+
+.ios .contact-us {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
 
 .contact-us iframe {
 	width: 100%;
-	height: calc(100% + 1px);
+	height: 100%;
 	border: 0;
+}
+
+.ios .contact-us iframe {
+	height: calc(100% + 1px);
 }
 
 #plusfriend-addfriend-button {
@@ -298,6 +305,18 @@ body {
 	position: absolute;
 	right: 10px;
 	top: 8px;
+}
+
+.btn-back {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	background: url(../images/ico-arr-left.png) no-repeat center center;
+	background-size: 20px auto;
+	overflow: hidden;
 }
 
 @media only all and (max-width:375px) {

@@ -25,27 +25,31 @@
 	<p class="btn-help"><a href="https://goo.gl/forms/VucN7IxBScFKyM722">도와줘요, 인시퀀스!</a></p>
 	<section class="help">
 		<div class="help-header">
-			<h2 class="help-title"><a href="#">웹 <span>서비스</span> 개발은 인시퀀스</a></h2>
+			<h2 class="help-title">웹 개발은 인시퀀스</h2>
 			<!-- <div id="plusfriend-addfriend-button"></div> -->
 			<div id="plusfriend-chat-button"></div>
 		</div>
-		<div class="contact-us"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeTeMwUH9Wls54iMo7CKUiw1TcnKpOwtxvD4L85zmmhui6dA/viewform?embedded=true" title="인시퀀스 상담신청 구글설문">로드 중...</iframe></div>
+		<div class="contact-us"><iframe id="googleFrm" src="https://docs.google.com/forms/d/e/1FAIpQLSeeTeMwUH9Wls54iMo7CKUiw1TcnKpOwtxvD4L85zmmhui6dA/viewform?embedded=true" title="인시퀀스 상담신청 구글설문">로드 중...</iframe></div>
+		<button type="button" class="btn-back">Back</button>
 	</section>
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script>
+	if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+		$('body').addClass('ios');
+	}
 	$(window).on('load', function() {
 		$('#loading').delay(300).fadeOut('fast');
 	});
 	$('.btn-help a').on('click', function() {
-		// var tg = $(this).attr('href')
 		$('.help').addClass('opened');
-		/*setTimeout(function() { location.href = '' + tg + '' }, 1000);*/
 		return false;
 	});
-	$('.help-title a').on('click', function() {
+	$('.btn-back').on('click', function() {
 		$('.help').removeClass('opened');
+		return false;
 	});
+
 </script>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123672562-1"></script>
@@ -57,6 +61,7 @@
 	}
 	gtag('js', new Date());
 	gtag('config', 'UA-123672562-1');
+
 </script>
 <!-- 카카오 플러스친구 -->
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -70,6 +75,7 @@
 		container: '#plusfriend-chat-button',
 		plusFriendId: '_xdxkhZC'
 	});
+
 </script>
 
 </html>
