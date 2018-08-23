@@ -17,12 +17,24 @@
 </head>
 
 <body>
-	<div id="loading"></div>
+	<div id="loading">
+		<div class="loader">
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__bar"></div>
+			<div class="loader__ball"></div>
+		</div>
+	</div>
 	<div id="intro">
 		<h1 class="logo"><img src="images/logo-inseq-invers.png" alt="INSEQUENCE"></h1>
 		<p class="slogan">웹 서비스 개발 전문가 그룹, <strong>인시퀀스</strong></p>
 	</div>
-	<p class="btn-help"><a href="https://goo.gl/forms/VucN7IxBScFKyM722">도와줘요, 인시퀀스!</a></p>
+	<ul class="menu">
+		<li class="btn-learn"><a href="#" target="_blank" title="새창">런-시퀀스 1기 모집 <span class="label label-ongoing">모집중</span></a></li>
+		<li class="btn-help"><a href="https://goo.gl/forms/VucN7IxBScFKyM722">도와줘요, 인시퀀스!</a></li>
+	</ul>
 	<section class="help">
 		<div class="help-header">
 			<h2 class="help-title">웹 개발은 인시퀀스</h2>
@@ -39,7 +51,7 @@
 		$('body').addClass('ios');
 	}
 	$(window).on('load', function() {
-		$('#loading').delay(300).fadeOut('fast');
+		$('#loading').delay(300).fadeOut(1000);
 	});
 	$('.btn-help a').on('click', function() {
 		$('.help').addClass('opened');
@@ -67,10 +79,6 @@
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
 	Kakao.init('a2bef7fee9bb3571bee58d49f3f7e29e');
-	/*Kakao.PlusFriend.createAddFriendButton({
-		container: '#plusfriend-addfriend-button',
-		plusFriendId: '_xdxkhZC'
-	});*/
 	Kakao.PlusFriend.createChatButton({
 		container: '#plusfriend-chat-button',
 		plusFriendId: '_xdxkhZC'
