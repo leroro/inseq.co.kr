@@ -23,7 +23,7 @@ li {
 	left: 0;
 	right: 0;
 	top: 50%;
-	width: 400px;
+	width: 410px;
 	min-width: 320px;
 	max-width: 100%;
 	height: 200px;
@@ -37,7 +37,14 @@ li {
 	overflow: hidden;
 }
 
-.logo:before {
+.logo span {
+	position: relative;
+	margin: 0 5px;
+	display: block;
+	overflow: hidden;
+}
+
+.logo span:before {
 	display: block;
 	position: absolute;
 	left: -200px;
@@ -49,18 +56,6 @@ li {
 	background-size: 100% auto;
 	animation: logoBgMove 30s;
 	animation-iteration-count: infinite;
-	z-index: 50;
-}
-
-.logo:after {
-	position: absolute;
-	top: -2px;
-	left: -5px;
-	bottom: -2px;
-	width: 10px;
-	background: #111;
-	content: '';
-	z-index: 100;
 }
 
 @keyframes logoFade {
@@ -99,8 +94,8 @@ li {
 .logo img {
 	position: relative;
 	width: 400px;
-	margin: -1px;
-	max-width: calc(100% + 2px);
+	margin: 0 -10px;
+	max-width: calc(100% + 20px);
 	vertical-align: top;
 	z-index: 100;
 }
