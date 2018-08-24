@@ -35,7 +35,6 @@ li {
 	position: relative;
 	margin: auto;
 	overflow: hidden;
-	/* background-color: #f49ac0; */
 }
 
 .logo:before {
@@ -50,16 +49,7 @@ li {
 	background-size: 100% auto;
 	animation: logoBgMove 30s;
 	animation-iteration-count: infinite;
-}
-
-.logo:after {
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	bottom: -2px;
-	width: 5px;
-	background: #111;
-	content: '';
+	z-index: 50;
 }
 
 @keyframes logoFade {
@@ -101,6 +91,7 @@ li {
 	margin: -1px;
 	max-width: calc(100% + 2px);
 	vertical-align: top;
+	z-index: 100;
 }
 
 .slogan {
@@ -279,6 +270,19 @@ li {
 	background: url(../images/ico-arr-left.png) no-repeat center center;
 	background-size: 20px auto;
 	overflow: hidden;
+}
+
+@media only all and (max-width:767px) {
+	body:before {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 20px;
+		height: 60vh;
+		background-color: #111;
+		z-index: 110;
+		content: '';
+	}
 }
 
 @media only all and (max-width:375px) {
