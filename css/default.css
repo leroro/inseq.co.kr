@@ -352,8 +352,10 @@ caption.tts {
 
 .text-xl {
 	font-size: 1.5rem;
+	line-height: 1.3;
 }
 
 .text-xxl {
 	font-size: 2rem;
+	line-height: 1.3;
 }

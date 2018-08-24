@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0 20px;
+	background: #fff;
+	border-bottom: 1px solid #555;
+	line-height: 60px;
+	z-index: 500;
+}
+
+.brand {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 60px;
+	margin: 0;
+	font-size: 30px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.brand a {
+	display: block;
+	padding: 0 20px;
+	text-decoration: none;
+}
+
+#gnb {
+	float: right;
+	font-size: 20px;
+}
+
+#gnb ul {
+	margin: 0;
+	padding: 0;
+}
+
+#gnb li {
+	display: inline-block;
+	margin-left: 1.5em;
+	vertical-align: top;
+}
+
+#gnb a {
+	display: block;
+	color: #000;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+section:nth-child(odd) {
+	background-color: #f8f2f8;
+}
+
+section .inner,
+footer .inner {
+	max-width: 750px;
+	margin: auto;
+	padding: 50px 20px;
+}
+
+.sub-section h2 {
+	font-size: 26px;
+}
+
+.sub-section h3 {
+	margin: 20px 0 15px;
+	font-size: 24px;
+}
+
+footer {
+	color: #fff;
+	background-color: #000;
+	padding: 20px 20px;
+}
+
+#company {
+	background: #ddd;
+}
+
+#home {
+	background-color: #b2c7d9;
+	padding-top: 60px;
+}
+
+#home .inner {
+	overflow: hidden;
+}
+
+#home h2 {
+	margin-top: 0;
+}
+
+.chat-user,
+.chat-admin {
+	position: relative;
+	border-radius: 5px;
+	line-height: 1.3;
+}
+
+.chat-user {
+	max-width: 350px;
+	margin: 3em 30px 15px 50px;
+	padding: 10px 15px;
+	background: #fff;
+}
+
+.chat-user .user {
+	top: -30px;
+	left: 0;
+	position: absolute;
+}
+
+.chat-user:before {
+	position: absolute;
+	top: -25px;
+	left: -50px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: #fff;
+	content: '';
+}
+
+.chat-admin {
+	clear: both;
+	float: right;
+	width: 500px;
+	max-width: 100%;
+	margin-top: 10px;
+	padding: 10px 20px 20px;
+	background-color: #ffeb33;
+}
+
+.btn-area {
+	border-top: 1px dashed rgba(0, 0, 0, 0.3);
+	margin-top: 20px;
+	padding-top: 25px;
+	text-align: center;
+}
+
+.btn-apply {
+	display: inline-block;
+	padding: 0 20px 0 80px;
+	font-weight: 600;
+	color: #fff;
+	font-size: 18px;
+	line-height: 50px;
+	white-space: nowrap;
+	text-decoration: none;
+	border-radius: 30px;
+	background: darkblue url(../images/ico-run.png) no-repeat 20px center;
+	background-size: 46px auto;
+}
+
+.table {
+	border-top: 2px solid #000;
+	width: 100%;
+	border-spacing: 0;
+}
+
+.table th,
+.table td {
+	border-bottom: 1px solid #ddd;
+}
+
+.table th {
+	background-color: #f8f2f8;
+}
+
+@media only all and (min-width:768px) {
+	section .inner,
+	footer .inner {
+		max-width: 950px;
+	}
+	.sub-section .inner {
+		position: relative;
+		padding-left: 200px;
+	}
+	.sub-section h2 {
+		position: absolute;
+		left: 0;
+		top: -2px;
+		padding-left: 20px;
+	}
+	.sub-section .inner,
+	.sub-section h2 {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+	.sub-section h2,
+	.sub-section h2 + * {
+		margin-top: 0;
+	}
+	#home .inner {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+@media only all and (max-width:767px) {
+	.brand .word-seq {
+		display: none;
+	}
+	#home br {
+		display: none;
+	}
+	#gnb {
+		font-size: 16px;
+	}
+	#gnb li {
+		margin: 0 2px;
+	}
+	#home .inner {
+		padding-top: 30px;
+	}
+}
+
+@media only all and (max-width:360px) {
+	header {
+		padding-right: 0.8em;
+	}
+	#gnb {
+		font-size: 15px;
+	}
+}
+
+@media only all and (max-width:320px) {
+	header {
+		padding-right: 0.8em;
+	}
+	.brand a {
+		padding: 0 15px;
+	}
+	#gnb {
+		font-size: 14px;
+	}
+}
