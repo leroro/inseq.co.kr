@@ -39,8 +39,9 @@ li {
 
 .logo span {
 	position: relative;
-	margin: 0 5px;
+	margin: 1px 5px;
 	display: block;
+	background-color: red;
 	overflow: hidden;
 }
 
