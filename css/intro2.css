@@ -58,7 +58,7 @@ li {
 	left: -5px;
 	bottom: -2px;
 	width: 10px;
-	background: red;
+	background: #111;
 	content: '';
 	z-index: 100;
 }
