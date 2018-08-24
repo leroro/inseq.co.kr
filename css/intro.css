@@ -88,8 +88,8 @@ li {
 .logo img {
 	position: relative;
 	width: 400px;
-	margin: -1px;
-	max-width: calc(100% + 2px);
+	margin: 0 -10px;
+	max-width: calc(100% + 20px);
 	vertical-align: top;
 	z-index: 100;
 }
