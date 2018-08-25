@@ -63,9 +63,9 @@ section:nth-child(odd) {
 
 section .inner,
 footer .inner {
-	max-width: 750px;
+	max-width: 700px;
 	margin: auto;
-	padding: 50px 20px;
+	padding: 30px 20px 50px;
 }
 
 .sub-section h2 {
@@ -74,7 +74,7 @@ footer .inner {
 
 .sub-section h3 {
 	margin: 20px 0 15px;
-	font-size: 24px;
+	font-size: 23px;
 }
 
 footer {
@@ -85,6 +85,10 @@ footer {
 
 #company {
 	background: #ddd;
+}
+
+#company .inner {
+	padding-bottom: 0;
 }
 
 #home {
@@ -108,6 +112,7 @@ footer {
 }
 
 .chat-user {
+	float: left;
 	max-width: 350px;
 	margin: 3em 30px 15px 50px;
 	padding: 10px 15px;
@@ -135,11 +140,14 @@ footer {
 .chat-admin {
 	clear: both;
 	float: right;
-	width: 500px;
 	max-width: 100%;
 	margin-top: 10px;
 	padding: 10px 20px 20px;
 	background-color: #ffeb33;
+}
+
+div.chat-admin {
+	width: 500px;
 }
 
 .btn-area {
@@ -171,15 +179,28 @@ footer {
 
 .table th,
 .table td {
+	height: 40px;
 	border-bottom: 1px solid #ddd;
+}
+
+.table td + td {
+	border-left: 1px solid #ddd;
+}
+
+.table th {
+	padding: 0 15px;
 }
 
 .table th {
 	background-color: #f8f2f8;
 }
 
+#map {
+	height: 400px;
+}
+
 @media only all and (min-width:768px) {
-	section .inner,
+	.sub-section .inner,
 	footer .inner {
 		max-width: 950px;
 	}
@@ -206,6 +227,20 @@ footer {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+	#company {
+		position: relative;
+		padding-bottom: 510px;
+	}
+	.location {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 500px;
+	}
+	.location #map {
+		height: 500px;
+	}
 }
 
 @media only all and (max-width:767px) {
@@ -221,8 +256,8 @@ footer {
 	#gnb li {
 		margin: 0 2px;
 	}
-	#home .inner {
-		padding-top: 30px;
+	.location {
+		margin: 0 -20px;
 	}
 }
 
