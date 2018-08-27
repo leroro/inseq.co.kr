@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-body {
-	margin: 0;
-	padding: 0;
-}
-
 header {
 	position: fixed;
 	top: 0;
@@ -91,16 +86,16 @@ footer {
 	padding-bottom: 0;
 }
 
-#home {
+#home-learn {
 	background-color: #b2c7d9;
 	padding-top: 60px;
 }
 
-#home .inner {
+#home-learn .inner {
 	overflow: hidden;
 }
 
-#home h2 {
+#home-learnh2 {
 	margin-top: 0;
 }
 
@@ -175,23 +170,25 @@ div.chat-admin {
 	border-top: 2px solid #000;
 	width: 100%;
 	border-spacing: 0;
+	background-color: #fff;
 }
 
 .table th,
 .table td {
 	height: 40px;
+	padding: 5px 15px;
 	border-bottom: 1px solid #ddd;
 }
 
+.table th + th,
 .table td + td {
 	border-left: 1px solid #ddd;
 }
 
-.table th {
-	padding: 0 15px;
-}
+.table th {}
 
-.table th {
+.table tbody th {
+	padding: 5px 15px;
 	background-color: #f8f2f8;
 }
 
@@ -223,7 +220,7 @@ div.chat-admin {
 	.sub-section h2 + * {
 		margin-top: 0;
 	}
-	#home .inner {
+	#home-learn .inner {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
@@ -247,7 +244,7 @@ div.chat-admin {
 	.brand .word-seq {
 		display: none;
 	}
-	#home br {
+	#home-learnbr {
 		display: none;
 	}
 	#gnb {
