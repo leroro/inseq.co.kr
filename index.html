@@ -13,11 +13,13 @@
 	<meta property="og:image" content="http://inseq.co.kr/images/logo-inseq-kakao.png">
 	<meta property="og:site_name" content="인시퀀스">
 	<link rel="stylesheet" type="text/css" href="css/default.css" media="all">
-	<link rel="stylesheet" type="text/css" href="css/intro.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 	<link rel="shortcut icon" href="images/favicon.ico" media="all">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="main">
 	<div id="loading">
 		<div class="loader">
 			<div class="loader__bar"></div>
@@ -28,25 +30,181 @@
 			<div class="loader__ball"></div>
 		</div>
 	</div>
-	<div id="intro">
-		<h1 class="logo"><img src="images/logo-inseq-invers2.png" alt="INSEQUENCE"></h1>
-		<p class="slogan">웹 서비스 개발 전문가 그룹, <strong>인시퀀스</strong></p>
-	</div>
-	<ul class="menu">
-		<li class="btn-learn"><a href="learn/">인턴십 모집<span class="word">공고</span> <span class="label">웹 퍼블리셔</span></a></li>
-		<li class="btn-help"><a href="https://goo.gl/forms/VucN7IxBScFKyM722">도와줘요, 인시퀀스!</a></li>
-	</ul>
-	<section class="help">
-		<div class="help-header">
-			<h2 class="help-title">웹 개발은 인시퀀스</h2>
+	<header class="header">
+		<div class="nav-bar">
+			<h1 class="ci-logo"><a href="#home" class="nav-scroll">인시퀀스</a></h1>
+		</div>
+		<a href="#" id="btn-allmenu"><span class="fa fa-bars"><span class="tts">전체메뉴 열기</span></span></a>
+		<nav id="gnb">
+			<ul>
+				<li><a href="#what-we-do" class="nav-scroll">What we do</a></li>
+				<li><a href="#learn" class="nav-scroll">Learn-seq</a></li>
+				<li><a href="#who-we-are" class="nav-scroll">Who we are</a></li>
+				<li><a href="#help">Contact us</a></li>
+			</ul>
+			<button type="button" id="btn-allmenu-close"><span class="fa fa-times"><span class="tts">전체메뉴 닫기</span></span></button>
+		</nav>
+	</header>
+	<section id="home">
+		<div class="inseq-logo">
+			<h1 class="logo"><img src="images/logo-inseq-invers2.png" alt="INSEQUENCE"></h1>
+			<p class="slogan">웹 서비스 개발 전문가 그룹, <strong>인시퀀스</strong></p>
+		</div>
+		<!--
+		<div class="btn-area">
+			<a href="#" class="btn-learn">인턴십 모집<span class="word">공고</span> <span class="label">웹 퍼블리셔</span></a>
+		</div>
+		-->
+		<svg class="bg-arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f8f2f8" width="100%" height="140" viewbox="0 0 4.66666 0.333331" preserveaspectratio="none" style="height: 140px;"><path class="fil0" d="M-0 0.333331l4.66666 0 0 -3.93701e-006 -2.33333 0 -2.33333 0 0 3.93701e-006zm0 -0.333331l4.66666 0 0 0.166661 -4.66666 0 0 -0.166661zm4.66666 0.332618l0 -0.165953 -4.66666 0 0 0.165953 1.16162 -0.0826181 1.17171 -0.0833228 1.17171 0.0833228 1.16162 0.0826181z"></path></svg>
+	</section>
+	<section id="what-we-do">
+		<div class="inner">
+			<h2 class="title-center">What we do</h2>
+			<div class="service">
+				<dl>
+					<dt><span class="fa fa-solar-panel"></span> 웹 서비스 구축 및 운영</dt>
+					<dd>
+						<p>마이크로 사이트부터 웹 사이트까지! 정확한 니즈 분석과 일정 수립, 철저한 리스크 관리를 통해 프로젝트를 성공적으로 마무리합니다.</p>
+						<ul class="tag-list">
+							<li>홈페이지</li>
+							<li>업무시스템</li>
+							<li>웹앱</li>
+							<li>하이브리드앱</li>
+							<li>마이크로사이트</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt><span class="fa fa-hands-helping"></span> 아웃소싱 &amp; 컨소시엄</dt>
+					<dd>
+						<p>인시퀀스와 함께 하세요. 검증된 기술력과 적극적인 커뮤니케이션으로 만족스러운 팀워크를 선사합니다.</p>
+						<ul class="tag-list">
+							<li>UI/UX</li>
+							<li>javascript</li>
+							<li>CSS3</li>
+							<li>php</li>
+							<li>java</li>
+							<li>HTML5</li>
+							<li>jQuery</li>
+							<li>jsp</li>
+							<li>spring</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt><span class="fa fa-code"></span> UI 프레임워크 개발</dt>
+					<dd>
+						<p>국내 환경에 최적화된 프레임워크를 자체 개발, 프로젝트에 특화 적용하여 일관된 사용자경험과 높은 생산성을 제공합니다.</p>
+						<ul class="tag-list">
+							<li>웹 표준</li>
+							<li>웹 접근성</li>
+							<li>반응형 웹</li>
+							<li>SEO</li>
+							<li>Sass</li>
+							<li>Nodejs</li>
+							<li>Vuejs</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt><span class="fa fa-wrench"></span>솔루션 개발 <span class="label">출시예정</span></dt>
+					<dd>인재 육성과 지속성장을 위한 미래형 콘텐츠 플랫폼 개발</dd>
+					<dd>전자정부프레임워크 기반 CMS 개발
+						<ul class="tag-list">
+							<li>웹 호환성</li>
+							<li>웹 취약점</li>
+							<li>시큐어코딩</li>
+							<li>전자정부프레임워크</li>
+							<li>KISA 암호화 모듈</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<h3 class="tts">포트폴리오</h3>
+		<p class="portfolio-list">
+			<a href="#"><img src="images/img-pf-magictrain.jpg" alt="매직트레인"></a>
+			<a href="#"><img src="images/img-pf-kimst.jpg" alt="해양수산과학기술진흥원"></a>
+			<a href="#"><img src="images/img-pf-cjhello.jpg" alt="CJ헬로"></a>
+			<a href="#"><img src="images/img-pf-storyway.jpg" alt="스토리웨이 하이브리드앱"></a>
+			<a href="#"><img src="images/img-pf-mayor-paju.jpg" alt="파주시외 3개시 열린시장실"></a>
+			<a href="#"><img src="images/img-pf-sharetyping.jpg" alt=""><img src="images/img-pf-st.png" alt="쉐어타이핑"></a>
+			<a href="#"><img src="images/img-pf-tims.png" alt="택시운행정보관리시스템"></a>
+			<a href="#"><img src="images/img-pf-bexpress.png" alt="Bexpress"></a>
+			<a href="#"><img src="images/img-pf-mofa.jpg" alt="외교부 재외공관 개편사업 3, 4차"></a>
+			<a href="#"><img src="images/img-pf-hyundai.jpg" alt="2017 현대백화점 설 브로셔"></a>
+			<a href="#"><img src="images/img-pf-gitan.jpg" alt="기탄교육 쌤수학"></a>
+			<a href="#"><img src="images/img-pf-samsung-m.jpg" alt="삼성카드 인생락서 모바일"></a>
+			<a href="#"><img src="images/img-pf-samsung.jpg" alt="삼성카드 인생락서"></a>
+			<a href="#"><img src="images/img-pf-tims2.jpg" alt="택시운행정보관리시스템 대시보드"></a>
+		</p>
+	</section>
+	<section id="learn">
+		<div class="inner">
+			<h2>Learn &amp; Run with INSEQ</h2>
+			<p class="text-xxl"><strong>끝이 보이지 않는 계단이 눈앞에 펼쳐져 있어도 <span class="word">in sequence!</span><br> 포기하지않는 근성이야말로 위대한 성장의 원동력입니다.</strong></p>
+			<p class="text-lg">유연하면서도 강단있는 리더십으로 <span class="word">잠재력있는 인재를 발굴/육성하여</span><br> 미래 웹 기술을 선도하는 개발 명가로 거듭나겠습니다.</p>
+			<!--
+			<div class="btn-area">
+				<a href="#" class="btn-learn">런-시퀀스 웹퍼블리셔 인턴 모집</a>
+			</div>
+			-->
+		</div>
+		<svg class="bg-arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f8f2f8" width="100%" height="140" viewbox="0 0 4.66666 0.333331" preserveaspectratio="none" style="height: 140px;"><path class="fil0" d="M-0 0.333331l4.66666 0 0 -3.93701e-006 -2.33333 0 -2.33333 0 0 3.93701e-006zm0 -0.333331l4.66666 0 0 0.166661 -4.66666 0 0 -0.166661zm4.66666 0.332618l0 -0.165953 -4.66666 0 0 0.165953 1.16162 -0.0826181 1.17171 -0.0833228 1.17171 0.0833228 1.16162 0.0826181z"></path></svg>
+	</section>
+	<section id="who-we-are">
+		<div class="inner">
+			<h2 class="title-center">Who we are</h2>
+			<div class="company-intro">
+				<img src="images/img-office-pic1.jpg" alt="인시퀀스 현관 사진">
+				<p class="text-xl">웹 서비스 개발 전문가 그룹, <strong>인시퀀스</strong>는<br> 10년 이상 축적된 기술력의 소수정예 기업입니다.</p>
+				<p class="text-lg">2016년 설립 이래 대형 관공서 및 기업 웹 사이트 구축 사업, UI/UX 설계 및 개발, CMS 솔루션 개발 등 다양한 사업을 성공적으로 수행하며 지속적으로 성장해 왔습니다. 인시퀀스의 강력한 경쟁력인 온라인 기반의 미래지향적 업무 인프라를 통한 체계적인 프로젝트 관리 노하우로 고객 만족을 실현합니다.</p>
+			</div>
+		</div>
+		<div class="location-info">
+			<h2 class="tts">Contact Us</h2>
+			<p class="location-address"><strong>서울 강서구 등촌로13가길 17<br> 라온제나 101동 502호 인시퀀스</strong></p>
+			<dl class="traffic">
+				<dt>인근 버스정류장</dt>
+				<dd>용문사.시립화곡청소년수련관 (16-177)</dd>
+				<dd>영도중.강서고입구.기아양서대리점 (15-112)</dd>
+				<dt>인근 지하철</dt>
+				<dd>목동역 5호선, 등촌역 9호선</dd>
+			</dl>
+		</div>
+		<div id="map"></div>
+	</section>
+	<section id="contact">
+		<div class="contact-header">
+			<h2 class="contact-title">Contact us</h2>
 			<!-- <div id="plusfriend-addfriend-button"></div> -->
 			<div id="plusfriend-chat-button"></div>
 		</div>
-		<div class="contact-us"><iframe id="googleFrm" src="https://docs.google.com/forms/d/e/1FAIpQLSeeTeMwUH9Wls54iMo7CKUiw1TcnKpOwtxvD4L85zmmhui6dA/viewform?embedded=true" title="인시퀀스 상담신청 구글설문">로드 중...</iframe></div>
+		<div class="contact-us"><iframe id="googleFrm" src="https://docs.google.com/forms/d/e/1FAIpQLSeeTeMwUH9Wls54iMo7CKUiw1TcnKpOwtxvD4L85zmmhui6dA/viewform" title="인시퀀스 상담신청 구글설문">로드 중...</iframe></div>
 		<button type="button" class="btn-back">Back</button>
 	</section>
+	<section id="partners">
+		<div class="inner">
+			<h2 class="title-center">Partners</h2>
+			<p class="desc">신뢰하여주신 파트너스에 최상의 팀워크로 보답하겠습니다.</p>
+			<ul class="partners-list">
+				<li><img src="images/logo-partners-teambear.png" alt="팀베어"></li>
+				<li><img src="images/logo-partners-vworks.png" alt="브이웍스"></li>
+				<li><img src="images/logo-partners-abworks.png" alt="AB미디어&웍스"></li>
+				<li><img src="images/logo-partners-zesinc.png" alt="제스아이앤씨"></li>
+				<li><img src="images/logo-partners-entcon.png" alt="이앤티컨버전스"></li>
+			</ul>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="inner">
+			<address>COPYRIGHT 2016 insequence. <span class="word">ALL RIGHT RESERVED.</span></address>
+		</div>
+	</footer>
 	<!-- JS -->
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script src="js/jquery.easing.1.3.min.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script src="js/ui-common.js"></script>
 	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123672562-1"></script>
@@ -67,6 +225,49 @@
 		Kakao.PlusFriend.createChatButton({
 			container: '#plusfriend-chat-button',
 			plusFriendId: '_xdxkhZC'
+		});
+
+	</script>
+	<!-- 네이버지도 API -->
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=85IPoKYFaBFCxtYVMn4F&submodules=geocoder"></script>
+	<script>
+		var map = new naver.maps.Map('map', {
+			zoom: 9
+		});
+		var myaddress = '등촌로13가길 17';
+		naver.maps.Service.geocode({
+			address: myaddress
+		}, function(status, response) {
+			if (status !== naver.maps.Service.Status.OK) {
+				return alert(myaddress + '의 검색 결과가 없거나 기타 네트워크 에러');
+			}
+			var result = response.result;
+			var inseq = new naver.maps.Point(result.items[0].point.x, result.items[0].point.y);
+			map.setCenter(inseq); // 검색된 좌표로 지도 이동
+
+			var contentString = [
+				'<p class="location-marker">인시퀀스</p>'
+			].join('');
+
+			// 마커 표시
+			var marker = new naver.maps.Marker({
+				position: inseq,
+				map: map
+			});
+			// 마커 클릭 이벤트 처리
+			naver.maps.Event.addListener(marker, "click", function(e) {
+				if (infowindow.getMap()) {
+					infowindow.close();
+				} else {
+					infowindow.open(map, marker);
+				}
+			});
+			// 마크 클릭시 인포윈도우 오픈
+			var infowindow = new naver.maps.InfoWindow({
+				content: contentString
+			});
+
+			// infowindow.open(map, marker);
 		});
 
 	</script>

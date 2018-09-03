@@ -45,7 +45,7 @@ body {
 	word-break: keep-all;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	font-family: 'NanumS', 'Malgun Gothic', sans-serif, Arial, Dotum, Gulim, Verdana, Tahoma;
+	font-family: 'Montserrat', 'NanumS', 'Malgun Gothic', sans-serif, Arial, Dotum, Gulim, Verdana, Tahoma;
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -353,15 +353,14 @@ caption.tts {
 }
 
 .text-lg {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 
 .text-xl {
-	font-size: 1.5rem;
-	line-height: 1.3;
+	font-size: 1.6rem;
 }
 
 .text-xxl {
 	font-size: 2rem;
-	line-height: 1.3;
+	letter-spacing: -0.03em;
 }
