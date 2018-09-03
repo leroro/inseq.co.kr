@@ -143,6 +143,7 @@ if ($('body').hasClass('main')) {
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		centerMode: true,
+		centerPadding: 0,
 		variableWidth: true,
 		initialSlide: 2
 	});

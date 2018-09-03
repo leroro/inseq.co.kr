@@ -496,10 +496,6 @@ section h3 {
 	content: '';
 }
 
-.portfolio-list .slick-list {
-	padding: 0 50px !important;
-}
-
 .portfolio-list .slick-slide,
 .portfolio-list a {
 	/*width: auto !important;*/
