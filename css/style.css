@@ -167,7 +167,7 @@ a {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 45%;
+	top: 48%;
 	width: 400px;
 	min-width: 320px;
 	max-width: 100%;
@@ -245,10 +245,11 @@ a {
 
 .slogan {
 	position: relative;
-	margin-top: -0.5em;
+	margin-top: -0.1em;
 	padding-bottom: 5px;
 	color: #999;
 	font-size: 19px;
+	letter-spacing: 0.02em;
 	background: #111;
 	z-index: 110;
 }
@@ -517,6 +518,12 @@ section h3 {
 	content: '';
 }
 
+.slick-track:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
 .portfolio-list .slick-current a,
 .portfolio-list a:hover {
 	box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3);
@@ -593,12 +600,11 @@ section h3 {
 }
 
 #learn .inner {
+	position: relative;
 	padding-top: 200px;
 	padding-bottom: 120px;
-	position: relative;
+	color: #fff;
 	text-align: right;
-	color: #bf2263;
-	color: rgba(255, 255, 255, 0.9);
 }
 
 #learn .word {
@@ -1117,10 +1123,6 @@ div.chat-admin {
 }
 
 @media only all and (max-width:375px) {
-	.slogan {
-		margin-top: 0;
-		font-size: 18px;
-	}
 	.contact-title {
 		font-size: 20px;
 	}
@@ -1139,6 +1141,9 @@ div.chat-admin {
 	#gnb {
 		font-size: 15px;
 	}
+	.slogan {
+		letter-spacing: -0.02em;
+	}
 }
 
 @media only all and (max-width:320px) {
@@ -1147,5 +1152,8 @@ div.chat-admin {
 	}
 	#gnb {
 		font-size: 14px;
+	}
+	.slogan {
+		font-size: 17px;
 	}
 }
