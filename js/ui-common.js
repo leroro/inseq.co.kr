@@ -46,7 +46,6 @@ $('#btn-allmenu').on('click', function () {
 });
 $('#btn-allmenu-close').on('click', function () {
 	$('#gnb').removeClass('show');
-	return false;
 });
 
 // 메인 전용 스크립트
