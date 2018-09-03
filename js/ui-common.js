@@ -7,7 +7,7 @@ $(function () {
 	});
 
 	// 견적문의
-	$('a[href="#help"]').on('click', function () {
+	$('a[href="#contact"]').on('click', function () {
 		contactOpen();
 	});
 	$('.btn-back').on('click', function () {
