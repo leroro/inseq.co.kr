@@ -359,13 +359,13 @@ a {
 	/*display: none;*/
 	position: fixed;
 	left: 0;
-	top: 0;
+	top: 150%;
 	right: 0;
 	width: 100vw;
 	height: 100vh;
 	background-color: #f6f6f6;
-	transform: translateY(150%);
-	-webkit-transform: translateY(150%);
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
 	transition-duration: .6s;
 	-webkit-transition-duration: .6s;
 	transition-timing-function: ease-out;
@@ -374,8 +374,12 @@ a {
 }
 
 #contact.opened {
-	transform: translateY(0);
-	-webkit-transform: translateY(0);
+	transform: translateY(-150%);
+	-webkit-transform: translateY(-150%);
+}
+
+.ie9 #contact.opened {
+	top: 0;
 }
 
 .contact-title {
