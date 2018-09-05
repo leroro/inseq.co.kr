@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lte IE 9]><html lang="ko" class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="ko">
-<!--<![endif]-->
 
 <head>
 	<title>인시퀀스 - 웹 서비스 개발 전문가 그룹</title>
@@ -60,7 +57,9 @@
 			<a href="#" class="btn-learn">인턴십 모집<span class="word">공고</span> <span class="label">웹 퍼블리셔</span></a>
 		</div>
 		-->
-		<svg class="bg-arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f8f2f8" width="100%" height="140" viewbox="0 0 4.66666 0.333331" preserveaspectratio="none" style="height: 140px;"><path class="fil0" d="M-0 0.333331l4.66666 0 0 -3.93701e-006 -2.33333 0 -2.33333 0 0 3.93701e-006zm0 -0.333331l4.66666 0 0 0.166661 -4.66666 0 0 -0.166661zm4.66666 0.332618l0 -0.165953 -4.66666 0 0 0.165953 1.16162 -0.0826181 1.17171 -0.0833228 1.17171 0.0833228 1.16162 0.0826181z"></path></svg>
+		<svg class="bg-arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f8f2f8" width="100%" height="140" viewbox="0 0 4.66666 0.333331" preserveaspectratio="none" style="height: 140px;">
+			<path class="fil0" d="M-0 0.333331l4.66666 0 0 -3.93701e-006 -2.33333 0 -2.33333 0 0 3.93701e-006zm0 -0.333331l4.66666 0 0 0.166661 -4.66666 0 0 -0.166661zm4.66666 0.332618l0 -0.165953 -4.66666 0 0 0.165953 1.16162 -0.0826181 1.17171 -0.0833228 1.17171 0.0833228 1.16162 0.0826181z"></path>
+		</svg>
 	</section>
 	<section id="what-we-do">
 		<div class="inner">
@@ -155,7 +154,9 @@
 			</div>
 			-->
 		</div>
-		<svg class="bg-arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f8f2f8" width="100%" height="140" viewbox="0 0 4.66666 0.333331" preserveaspectratio="none" style="height: 140px;"><path class="fil0" d="M-0 0.333331l4.66666 0 0 -3.93701e-006 -2.33333 0 -2.33333 0 0 3.93701e-006zm0 -0.333331l4.66666 0 0 0.166661 -4.66666 0 0 -0.166661zm4.66666 0.332618l0 -0.165953 -4.66666 0 0 0.165953 1.16162 -0.0826181 1.17171 -0.0833228 1.17171 0.0833228 1.16162 0.0826181z"></path></svg>
+		<svg class="bg-arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f8f2f8" width="100%" height="140" viewbox="0 0 4.66666 0.333331" preserveaspectratio="none" style="height: 140px;">
+			<path class="fil0" d="M-0 0.333331l4.66666 0 0 -3.93701e-006 -2.33333 0 -2.33333 0 0 3.93701e-006zm0 -0.333331l4.66666 0 0 0.166661 -4.66666 0 0 -0.166661zm4.66666 0.332618l0 -0.165953 -4.66666 0 0 0.165953 1.16162 -0.0826181 1.17171 -0.0833228 1.17171 0.0833228 1.16162 0.0826181z"></path>
+		</svg>
 	</section>
 	<section id="who-we-are">
 		<div class="inner">
@@ -243,42 +244,25 @@
 	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=85IPoKYFaBFCxtYVMn4F&submodules=geocoder"></script>
 	<script>
 		var map = new naver.maps.Map('map', {
+			center: new naver.maps.LatLng(37.5364193, 126.8619173),
 			zoom: 9
 		});
-		var myaddress = '등촌로13가길 17';
-		naver.maps.Service.geocode({
-			address: myaddress
-		}, function(status, response) {
-			if (status !== naver.maps.Service.Status.OK) {
-				return alert(myaddress + '의 검색 결과가 없거나 기타 네트워크 에러');
+
+		var marker = new naver.maps.Marker({
+			position: new naver.maps.LatLng(37.5364193, 126.8619173),
+			map: map
+		});
+
+		naver.maps.Event.addListener(marker, "click", function(e) {
+			if (infowindow.getMap()) {
+				infowindow.close();
+			} else {
+				infowindow.open(map, marker);
 			}
-			var result = response.result;
-			var inseq = new naver.maps.Point(result.items[0].point.x, result.items[0].point.y);
-			map.setCenter(inseq); // 검색된 좌표로 지도 이동
+		});
 
-			var contentString = [
-				'<p class="location-marker">인시퀀스</p>'
-			].join('');
-
-			// 마커 표시
-			var marker = new naver.maps.Marker({
-				position: inseq,
-				map: map
-			});
-			// 마커 클릭 이벤트 처리
-			naver.maps.Event.addListener(marker, "click", function(e) {
-				if (infowindow.getMap()) {
-					infowindow.close();
-				} else {
-					infowindow.open(map, marker);
-				}
-			});
-			// 마크 클릭시 인포윈도우 오픈
-			var infowindow = new naver.maps.InfoWindow({
-				content: contentString
-			});
-
-			// infowindow.open(map, marker);
+		var infowindow = new naver.maps.InfoWindow({
+			content: '<p class="location-marker">인시퀀스</p>'
 		});
 
 	</script>

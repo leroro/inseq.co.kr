@@ -1,6 +1,9 @@
 $(function () {
-	if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+	var agent = navigator.userAgent.toLowerCase();
+	if (/iphone|ipad|ipod/i.test(agent)) {
 		$('body').addClass('ios');
+	} else if (agent.indexOf('windows 10') || agent.indexOf('windows 8.1')) {
+		$('body').addClass('win8gt');
 	}
 	$(window).on('load', function () {
 		$('#loading').delay(100).fadeOut(1000);

@@ -222,14 +222,17 @@ a {
 @keyframes logoBgMove {
 	0% {
 		transform: translate(0, -50px) scale(1);
+		-ms-transform: translate(0, -50px) scale(1);
 		-webkit-transform: translate(0, -50px) scale(1);
 	}
 	50% {
 		transform: translate(-100px, -200px) scale(1.5);
+		-ms-transform: translate(-100px, -200px) scale(1.5);
 		-webkit-transform: translate(-100px, -200px) scale(1.5);
 	}
 	100% {
 		transform: translate(0, -50px) scale(1);
+		-ms-transform: translate(0, -50px) scale(1);
 		-webkit-transform: translate(0, -50px) scale(1);
 	}
 }
@@ -335,12 +338,14 @@ a {
 		text-shadow: 0 10px 10px rgba(0, 0, 0, .8);
 		-webkit-text-shadow: 0 10px 10px rgba(0, 0, 0, .8);
 		transform: translateY(3px);
+		-ms-transform: translateY(3px);
 		-webkit-transform: translateY(3px);
 	}
 	100% {
 		transform: translateY(-3px);
 		-webkit-transform: translateY(-3px);
 		text-shadow: 0 16px 25px rgba(0, 0, 0, .9);
+		-ms-text-shadow: 0 16px 25px rgba(0, 0, 0, .9);
 		-webkit-text-shadow: 0 16px 25px rgba(0, 0, 0, .9);
 	}
 }
@@ -353,34 +358,37 @@ a {
 	right: 0;
 	z-index: 400;
 	transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
 }
 
 #contact {
 	/*display: none;*/
 	position: fixed;
 	left: 0;
-	top: 150%;
+	top: 0;
 	right: 0;
 	width: 100vw;
 	height: 100vh;
 	background-color: #f6f6f6;
-	transform: translateY(0);
-	-webkit-transform: translateY(0);
+	transform: translateY(150%);
+	-ms-transform: translateY(150%);
+	-webkit-transform: translateY(150%);
 	transition-duration: .6s;
+	-ms-transition-duration: .6s;
 	-webkit-transition-duration: .6s;
 	transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
 	-webkit-transition-timing-function: ease-out;
 	z-index: 1800;
 }
 
 #contact.opened {
-	transform: translateY(-150%);
-	-webkit-transform: translateY(-150%);
+	transform: translateY(0);
+	-ms-transform: translateY(0);
+	-webkit-transform: translateY(0);
 }
 
-.ie9 #contact.opened {
-	top: 0;
-}
 
 .contact-title {
 	position: relative;
@@ -528,6 +536,8 @@ section h3 {
 	box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3);
 	z-index: 100;
 	transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
 }
 
 .portfolio-list .slick-current a:after,
@@ -596,6 +606,14 @@ section h3 {
 	background-size: cover;
 	background-attachment: fixed;
 	overflow: hidden;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+	.win8gt #home,
+	.win8gt #learn {
+		background-attachment: scroll;
+	}
 }
 
 #learn .inner {
@@ -680,28 +698,30 @@ section h3 {
 	text-align: left;
 	color: #bbb;
 	font-size: 13px;
+	overflow: hidden;
 }
 
 .footer .logo-btm {
 	position: absolute;
 	left: 0;
-	top: 30px;
-}
-
-.footer .btn-kakaoplus {
-	position: absolute;
-	right: 0;
-	top: 4px;
+	top: 32px;
 }
 
 .footer .logo-btm img {
 	height: 50px;
+	vertical-align: top;
 }
 
 .footer address {
 	position: relative;
 	padding-right: 150px;
 	font-style: normal;
+}
+
+.footer .btn-kakaoplus {
+	position: absolute;
+	right: 0;
+	top: 4px;
 }
 
 .footer .word {
@@ -938,6 +958,7 @@ div.chat-admin {
 @media only all and (min-width:768px) {
 	.header-hide .header {
 		transform: translateY(-60px);
+		-ms-transform: translateY(-60px);
 		-webkit-transform: translateY(-60px);
 	}
 	.sub-section .inner {
@@ -1087,6 +1108,7 @@ div.chat-admin {
 	}
 	.header-hide .nav-bar {
 		transform: translateY(-60px);
+		-ms-transform: translateY(-60px);
 		-webkit-transform: translateY(-60px);
 	}
 	section .inner {
