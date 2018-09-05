@@ -2,9 +2,10 @@ $(function () {
 	var agent = navigator.userAgent.toLowerCase();
 	if (/iphone|ipad|ipod/i.test(agent)) {
 		$('body').addClass('ios');
-	} else if (agent.indexOf('windows 10') || agent.indexOf('windows 8.1')) {
+	} else if (agent.indexOf('windows nt 10') >= 0 || agent.indexOf('windows nt 6.3') >= 0) {
 		$('body').addClass('win8gt');
 	}
+
 	$(window).on('load', function () {
 		$('#loading').delay(100).fadeOut(1000);
 	});
