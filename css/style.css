@@ -524,6 +524,28 @@ section h3 {
 	content: '';
 }
 
+.portfolio-list .slick-arrow {
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	opacity: 0.5;
+	font-size: 40px;
+	text-align: center;
+	z-index: 500;
+}
+
+.portfolio-list .slick-prev {
+	left: 0;
+}
+
+.portfolio-list .slick-next {
+	right: 0;
+}
+
 .slick-list:after,
 .slick-track:after {
 	display: block;
@@ -531,8 +553,7 @@ section h3 {
 	content: '';
 }
 
-.portfolio-list .slick-current a,
-.portfolio-list a:hover {
+.portfolio-list .slick-current a {
 	box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3);
 	z-index: 100;
 	transform: scale(1.05);
@@ -540,8 +561,7 @@ section h3 {
 	-webkit-transform: scale(1.05);
 }
 
-.portfolio-list .slick-current a:after,
-.portfolio-list a:hover:after {
+.portfolio-list .slick-current a:after {
 	opacity: 0;
 }
 

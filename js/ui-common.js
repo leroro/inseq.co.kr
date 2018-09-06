@@ -137,17 +137,24 @@ if ($('body').hasClass('main')) {
 	// 포트폴리오 슬라이더
 	$('.portfolio-list').slick({
 		dots: false,
-		arrows: false,
+		arrows: true,
+		prevArrow: '<button type="button" class="slick-prev fa fa-chevron-left"><span class="tts">이전</span></button>',
+		nextArrow: '<button type="button" class="slick-next fa fa-chevron-right"><span class="tts">다음</span></button>',
+		swipe: false,
+		touchMove: true,
 		easing: 'easeOutQuint',
 		speed: 1500,
 		infinite: true,
 		autoplay: true,
 		autoplaySpeed: 3000,
-		slidesToShow: 3,
-		slidesToScroll: 3,
+		slidesToShow: 1,
+		slidesToScroll: 1,
 		centerMode: true,
 		centerPadding: 0,
 		variableWidth: true,
-		initialSlide: 2
+		initialSlide: 2,
+		// pauseOnDotsHover : false,
+		// pauseOnFocus : false,
+		pauseOnHover: false
 	});
 }
