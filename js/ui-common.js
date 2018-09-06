@@ -153,8 +153,8 @@ if ($('body').hasClass('main')) {
 		centerPadding: 0,
 		variableWidth: true,
 		initialSlide: 2,
-		// pauseOnDotsHover : false,
-		// pauseOnFocus : false,
+		pauseOnDotsHover: false,
+		pauseOnFocus: false,
 		pauseOnHover: false
 	});
 }
