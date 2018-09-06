@@ -8,6 +8,7 @@ $(function () {
 
 	$(window).on('load', function () {
 		$('#loading').delay(100).fadeOut(1000);
+		$('#contact .contact-us').html('<iframe id="googleFrm" src="https://docs.google.com/forms/d/e/1FAIpQLSeeTeMwUH9Wls54iMo7CKUiw1TcnKpOwtxvD4L85zmmhui6dA/viewform" title="인시퀀스 상담신청 구글설문">로드 중...</iframe>');
 	});
 
 	// 견적문의
