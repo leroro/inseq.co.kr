@@ -155,6 +155,14 @@ if ($('body').hasClass('main')) {
 		initialSlide: 2,
 		pauseOnDotsHover: false,
 		pauseOnFocus: false,
-		pauseOnHover: false
+		pauseOnHover: false,
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					swipe: true
+				}
+			}
+		]
 	});
 }
