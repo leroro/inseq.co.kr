@@ -1227,6 +1227,10 @@ div.chat-admin {
 	.contact-title span {
 		display: none;
 	}
+	#home .btn-learn {
+		padding-left: 68px;
+		background-position: 15px center;
+	}
 	.btn-learn .word {
 		display: none;
 	}

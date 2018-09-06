@@ -13,6 +13,7 @@ $(function () {
 	// 견적문의
 	$('a[href="#contact"]').on('click', function () {
 		contactOpen();
+		return false;
 	});
 	$('.btn-back').on('click', function () {
 		$('body').removeClass('modal-opened');
@@ -160,7 +161,8 @@ if ($('body').hasClass('main')) {
 			{
 				breakpoint: 1025,
 				settings: {
-					swipe: true
+					swipe: true,
+					speed: 600
 				}
 			}
 		]
