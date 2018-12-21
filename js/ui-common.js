@@ -28,14 +28,14 @@ $(function () {
 	}).on('mouseleave', function () {
 		$(this).removeClass('hover');
 	});
-	$('.portfolio-list a').on('click', function () {
-		return false;
+	$('.portfolio-list a').on('click', function (e) {
+		e.preventDefault();
 	});
 
-	// 전체메뉴
-	$('.portfolio-list a').on('click', function () {
-		return false;
-	});
+	//	// 전체메뉴
+	//	$('.portfolio-list a').on('click', function () {
+	//		return false;
+	//	});
 });
 
 // 견적문의
@@ -154,10 +154,10 @@ if ($('body').hasClass('main')) {
 		centerMode: true,
 		centerPadding: 0,
 		variableWidth: true,
-		initialSlide: 2,
+		initialSlide: 0,
 		pauseOnDotsHover: false,
 		pauseOnFocus: false,
-		pauseOnHover: false,
+		//		pauseOnHover: false,
 		responsive: [
 			{
 				breakpoint: 1025,
