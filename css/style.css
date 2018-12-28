@@ -1278,6 +1278,138 @@ div.chat-admin {
 	height: 100%;
 }
 
+.portfolio-header .tb-m-area {
+	position: relative;
+	padding-bottom: 80%;
+}
+
+.portfolio-header .tb-m-area .tablet {
+	position: absolute;
+	right: 20%;
+	top: 0;
+	width: 48%;
+	height: 89.3%;
+	z-index: 1;
+}
+
+.portfolio-header .tb-m-area .tablet img {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-header .tb-m-area .tablet-screen {
+	position: absolute;
+	right: 21%;
+	top: 7%;
+	width: 46%;
+	height: 74%;
+}
+
+.portfolio-header .tb-m-area .tablet-screen img {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-header .tb-m-area .mobile-area {
+	position: absolute;
+	left: 25%;
+	top: 5%;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transform: rotate(-31deg);
+	-ms-transform: rotate(-31deg);
+	-webkit-transform: rotate(-31deg);
+}
+
+.portfolio-header .tb-m-area .mobile-area .mobile {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 24%;
+	height: auto;
+	z-index: 1
+}
+
+.portfolio-header .tb-m-area .mobile-area .mobile img {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-header .tb-m-area .mobile-area .mobile-screen {
+	position: absolute;
+	left: 1%;
+	top: 6%;
+	width: 19.7%;
+	height: auto;
+}
+
+.portfolio-header .tb-m-area .mobile-area .mobile-screen img {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-header .pc-tb-area {
+	position: relative;
+	padding-bottom: 80%;
+}
+
+.portfolio-header .pc-tb-area .pc {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80%;
+	height: 79%;
+	z-index: 1;
+}
+
+.portfolio-header .pc-tb-area .pc img {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-header .pc-tb-area .pc-screen {
+	position: absolute;
+	left: 1%;
+	top: 4%;
+	width: 77%;
+	height: 60.5%;
+}
+
+.portfolio-header .pc-tb-area .pc-screen img {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-header .pc-tb-area .tablet {
+	position: absolute;
+	right: 0;
+	top: 22%;
+	z-index: 2;
+	width: 31%;
+	height: 57%;
+}
+
+.portfolio-header .pc-tb-area .tablet img {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-header .pc-tb-area .tablet-screen {
+	position: absolute;
+	right: 1%;
+	top: 27%;
+	z-index: 1;
+	width: 29%;
+	height: 48%;
+}
+
+.portfolio-header .pc-tb-area .tablet-screen img {
+	width: 100%;
+	height: 100%;
+}
+
+/*
 .portfolio-header .tablet-screen {
 	width: 411px;
 	height: 425px;
@@ -1289,7 +1421,9 @@ div.chat-admin {
 	width: 100%;
 	height: 100%;
 }
+*/
 
+/*
 .portfolio-header .pc-tablet-screen {
 	width: 540px;
 	height: 396px;
@@ -1301,9 +1435,9 @@ div.chat-admin {
 	width: 100%;
 	height: 100%;
 }
+*/
 
 .portfolio-body .mobile {
-	padding-bottom: 170px;
 	position: relative;
 }
 
@@ -1323,6 +1457,33 @@ div.chat-admin {
 .portfolio-body .mobile img,
 .portfolio-body .pc img {
 	width: 100%;
+	height: 100%;
+}
+
+.portfolio-body .mobile .mobile-img {
+	width: 147px;
+	height: 264px;
+	border-radius: 10px;
+	overflow: hidden;
+	position: absolute;
+	right: 11%;
+	top: 81px;
+}
+
+.portfolio-body .mobile .mobile-area {
+	display: block;
+	position: relative;
+	min-width: 100%;
+	padding-bottom: 100%;
+}
+
+.portfolio-body .mobile .mobile-img.mobile2 {
+	right: 39%;
+	top: 273px;
+}
+
+.portfolio-body .mobile .mobile-img.mobile3 {
+	top: 391px;
 }
 
 .portfolio-body .pc {
@@ -1335,6 +1496,71 @@ div.chat-admin {
 	left: 50%;
 	top: -70px;
 	transform: translate(-50%);
+}
+
+.portfolio-body .pc .pc-area {
+	margin: 5% -367px;
+	padding: 20px;
+	transform-style: preserve-3d;
+	-webkit-transform: perspective(800px) rotateY(-50deg) rotateX(15deg) skewY(-8deg);
+	-ms-transform: perspective(800px) rotateY(-50deg) rotateX(15deg) skewY(-8deg);
+	-webkit-transform-origin: 600px center;
+	-ms-transform-origin: 600px center;
+	display: block;
+}
+
+.ie9 .portfolio-body .pc .pc-area .pc-desktop {
+	display: none;
+}
+
+.ie9 .portfolio-body .pc .pc-area {
+	margin: 0;
+	padding: 0;
+	transform-style: inherit;
+	-webkit-transform: inherit;
+	-webkit-transform-origin: inherit;
+	-ms-transform-origin: inherit;
+	display: block;
+}
+
+.ie9 .portfolio-body .pc .pc-area .pc-img {
+	width: calc(25% - 4px);
+	float: left;
+	margin: 2px;
+	border-radius: 3px;
+	height: auto;
+}
+
+.portfolio-body .pc .pc-area .pc-desktop {
+	display: block;
+	width: 20%;
+	position: absolute;
+	left: 40%;
+	top: 22px;
+	height: 121%;
+	z-index: -1;
+}
+
+.portfolio-body .pc .pc-area:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+
+.portfolio-body .pc .pc-area .pc-img {
+	width: 19.1%;
+	height: 165px;
+	float: left;
+	margin: 6px;
+	border-radius: 3px;
+	padding: 2px;
+}
+
+.portfolio-body .pc .pc-area .pc-img img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 @media only all and (min-width:768px) {
@@ -1637,10 +1863,6 @@ div.chat-admin {
 		background-size: cover;
 	}
 
-	.portfolio-body {
-		background-size: cover;
-	}
-
 	.portfolio-header .screen-wrap {
 		padding-bottom: 95%;
 	}
@@ -1681,22 +1903,29 @@ div.chat-admin {
 		padding: 14px 15px 0;
 	}
 
-
-	.portfolio-body .mobile {
-		margin-bottom: 85px;
-		padding-bottom: 0;
-	}
-
 	.portfolio-body .mobile .tit {
 		position: inherit;
 		left: 0;
 		top: 20px;
 	}
 
-	.portfolio-body .pc .tit {
-		position: inherit;
-		left: 0;
-		top: 0;
+	.portfolio-body .mobile .mobile-area {
+		margin-top: 20px;
+	}
+
+	.portfolio-body .mobile .mobile-img {
+		top: 20px;
+		width: 20.5%;
+		height: 37%;
+		max-width: 100%;
+	}
+
+	.portfolio-body .mobile .mobile-img.mobile2 {
+		top: 28%;
+	}
+
+	.portfolio-body .mobile .mobile-img.mobile3 {
+		top: 47%;
 	}
 
 	.portfolio-header .hash-tag-wrap li {
@@ -1713,6 +1942,13 @@ div.chat-admin {
 		height: auto;
 	}
 
+	.portfolio-body .pc .pc-area .pc-img img {
+		height: 100%;
+	}
+
+	.portfolio-body .pc .pc-area .pc-desktop {
+		height: 112%;
+	}
 }
 
 @media only all and (max-width:480px) {
@@ -1729,21 +1965,37 @@ div.chat-admin {
 	.portfolio-header .screen-inner {
 		padding: 0px 7px 0;
 	}
-	.portfolio-header .view-btn{
+
+	.portfolio-header .view-btn {
 		overflow: hidden;
 	}
+
 	.portfolio-header .view-btn .btn-android {
 		font-size: 14px;
 		padding: 10px 4px 11px;
-		
+
 	}
-	.portfolio-header .view-btn .btn-ios{
+
+	.portfolio-header .view-btn .btn-ios {
 		font-size: 14px;
 		padding: 10px 10px 11px;
-		
+
 	}
+
 	.portfolio-header .view-btn a + a {
 		margin-left: 5px;
+	}
+
+	.portfolio-body .mobile .mobile-img {
+		border-radius: 7px;
+	}
+
+	.portfolio-body .mobile .mobile-img.mobile3 {
+		top: 50%;
+	}
+
+	.portfolio-body .pc .pc-area .pc-img {
+		margin: 5px;
 	}
 }
 
