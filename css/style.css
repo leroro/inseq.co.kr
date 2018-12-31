@@ -1270,7 +1270,6 @@ div.chat-admin {
 	width: 495px;
 	height: 278px;
 	max-width: 100%;
-
 }
 
 .portfolio-header .screen-wrap .pc-screen img {
@@ -1299,10 +1298,10 @@ div.chat-admin {
 
 .portfolio-header .tb-m-area .tablet-screen {
 	position: absolute;
-	right: 21%;
-	top: 7%;
-	width: 46%;
-	height: 74%;
+	right: 21.9%;
+	top: 8%;
+	width: 256px;
+	height: 340px;
 }
 
 .portfolio-header .tb-m-area .tablet-screen img {
@@ -1370,11 +1369,20 @@ div.chat-admin {
 
 .portfolio-header .pc-tb-area .pc-screen {
 	position: absolute;
-	left: 1%;
-	top: 4%;
-	width: 77%;
-	height: 60.5%;
+	left: 3%;
+	top: 3%;
+	width: 426px;
+	height: 239px;
 }
+
+/*
+	position: absolute;
+	left: 2%;
+	top: 4%;
+	width: 75%;
+	height: 51.5%;
+	padding: 0 7px;
+*/
 
 .portfolio-header .pc-tb-area .pc-screen img {
 	width: 100%;
@@ -1400,8 +1408,8 @@ div.chat-admin {
 	right: 1%;
 	top: 27%;
 	z-index: 1;
-	width: 29%;
-	height: 48%;
+	width: 166px;
+	height: 222px;
 }
 
 .portfolio-header .pc-tb-area .tablet-screen img {
@@ -1409,33 +1417,22 @@ div.chat-admin {
 	height: 100%;
 }
 
-/*
-.portfolio-header .tablet-screen {
-	width: 411px;
-	height: 425px;
-	max-width: 100%;
-	margin: 0 auto 50px;
+.portfolio-header .mobile-area {
+	position: relative;
 }
 
-.portfolio-header .tablet-screen img {
-	width: 100%;
+.portfolio-header .mobile-area .mobile-screen img {
+	max-width: 100%;
 	height: 100%;
 }
-*/
 
-/*
-.portfolio-header .pc-tablet-screen {
-	width: 540px;
-	height: 396px;
-	max-width: 100%;
-	margin: 0 auto 50px;
+.portfolio-header .mobile-area .mobile-screen {
+	position: absolute;
+	left: 34.8%;
+	top: 12.5%;
+	width: 176px;
+	height: 301px;
 }
-
-.portfolio-header .pc-tablet-screen img {
-	width: 100%;
-	height: 100%;
-}
-*/
 
 .portfolio-body .mobile {
 	position: relative;
@@ -1461,13 +1458,18 @@ div.chat-admin {
 }
 
 .portfolio-body .mobile .mobile-img {
-	width: 147px;
-	height: 264px;
+	width: 145px;
+	height: 253px;
 	border-radius: 10px;
 	overflow: hidden;
 	position: absolute;
 	right: 11%;
 	top: 81px;
+}
+
+.portfolio-body .mobile .mobile-img img {
+	max-width: 100%;
+	height: auto;
 }
 
 .portfolio-body .mobile .mobile-area {
@@ -1509,7 +1511,7 @@ div.chat-admin {
 	display: block;
 }
 
-.ie9 .portfolio-body .pc .pc-area .pc-desktop {
+.ie9 .portfolio-body .pc .pc-area span:nth-child(3):after {
 	display: none;
 }
 
@@ -1521,24 +1523,15 @@ div.chat-admin {
 	-webkit-transform-origin: inherit;
 	-ms-transform-origin: inherit;
 	display: block;
+	position: relative;
 }
 
-.ie9 .portfolio-body .pc .pc-area .pc-img {
+.ie9 .portfolio-body .pc .pc-area span {
 	width: calc(25% - 4px);
 	float: left;
 	margin: 2px;
 	border-radius: 3px;
 	height: auto;
-}
-
-.portfolio-body .pc .pc-area .pc-desktop {
-	display: block;
-	width: 20%;
-	position: absolute;
-	left: 40%;
-	top: 22px;
-	height: 121%;
-	z-index: -1;
 }
 
 .portfolio-body .pc .pc-area:after {
@@ -1547,20 +1540,29 @@ div.chat-admin {
 	clear: both;
 }
 
+.portfolio-body .pc .pc-area:before {
+	content: '';
+	background: url(../images/img-pf-desktop-pc.png) no-repeat center center;
+	width: 20%;
+	height: 116%;
+	position: absolute;
+	left: 40%;
+	top: 8%;
+	z-index: -1;
+	background-size: 100% 100%;
+}
 
-.portfolio-body .pc .pc-area .pc-img {
+.portfolio-body .pc .pc-area img {
 	width: 19.1%;
 	height: 165px;
 	float: left;
 	margin: 6px;
 	border-radius: 3px;
 	padding: 2px;
-}
-
-.portfolio-body .pc .pc-area .pc-img img {
-	display: block;
+	position: relative;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 	max-width: 100%;
-	height: auto;
 }
 
 @media only all and (min-width:768px) {
@@ -1903,6 +1905,46 @@ div.chat-admin {
 		padding: 14px 15px 0;
 	}
 
+	.portfolio-header .pc-tb-area .pc-screen {
+		width: 75%;
+		height: 51.5%;
+	}
+
+	.portfolio-header .tb-m-area .tablet-screen {
+		width: 44.8%;
+		height: 74%;
+	}
+
+	.portfolio-header .pc-tb-area .tablet-screen {
+		width: 29%;
+		height: 48%;
+	}
+
+	.portfolio-header .mobile-area .mobile {
+		position: relative;
+		padding-top: 69%;
+
+	}
+
+	.portfolio-header .mobile-area .mobile img {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		margin-left: -17.2%;
+		width: 35%;
+		height: 100%;
+	}
+
+	.portfolio-header .mobile-area .mobile-screen {
+		width: 31%;
+		height: 77%;
+	}
+
+	.portfolio-header .mobile-area .mobile-screen img {
+		width: 100%;
+		height: 100%;
+	}
+
 	.portfolio-body .mobile .tit {
 		position: inherit;
 		left: 0;
@@ -1937,17 +1979,8 @@ div.chat-admin {
 		height: auto;
 	}
 
-	.portfolio-header .pc-tablet-screen {
-		width: 100%;
+	.portfolio-body .pc .pc-area img {
 		height: auto;
-	}
-
-	.portfolio-body .pc .pc-area .pc-img img {
-		height: 100%;
-	}
-
-	.portfolio-body .pc .pc-area .pc-desktop {
-		height: 112%;
 	}
 }
 
@@ -1994,7 +2027,7 @@ div.chat-admin {
 		top: 50%;
 	}
 
-	.portfolio-body .pc .pc-area .pc-img {
+	.portfolio-body .pc .pc-area span {
 		margin: 5px;
 	}
 }
