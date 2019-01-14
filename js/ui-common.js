@@ -181,6 +181,9 @@ if ($('body').hasClass('main')) {
 		var tg = $(this).attr('href');
 		modalOpen(tg, $(this));
 		e.preventDefault();
+
+		var fileName = $(tg).attr('id');
+		$(tg).load('html/'+fileName+'.html');
 	}).on('click', '.btn-close-popup', function (e) {
 		var target = $(this).closest('.portfolio-popup').attr('id');
 		modalClose('#' + target, modalOpener);
