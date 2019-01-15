@@ -171,6 +171,8 @@ if ($('body').hasClass('main')) {
 
 	// 포트폴리오 상세 레이어팝업
 	$(function () {
+		$('.main').append('<div class="portfolio-popup"></div>');
+
 		$('.portfolio-popup.show').each(function () {
 			modalOpen($(this), null);
 		});
@@ -179,11 +181,12 @@ if ($('body').hasClass('main')) {
 	var modalOpener = null;
 	$(document).on('click', 'a.portfolio-open', function (e) {
 		var tg = $(this).attr('href');
-		modalOpen(tg, $(this));
+		modalOpen('.portfolio-popup', modalOpener);
 		e.preventDefault();
 
-		var fileName = $(tg).attr('id');
-		$(tg).load('html/'+fileName+'.html');
+		$('.portfolio-popup').attr('id',tg);
+		var fileName = $('.portfolio-popup').attr('id');
+		$('.portfolio-popup').load('html/'+fileName+'.html');
 	}).on('click', '.btn-close-popup', function (e) {
 		var target = $(this).closest('.portfolio-popup').attr('id');
 		modalClose('#' + target, modalOpener);
