@@ -137,36 +137,35 @@ if ($('body').hasClass('main')) {
 	});
 
 	// 포트폴리오 슬라이더
-	$('.portfolio-list').slick({
-		dots: false,
-		arrows: true,
-		prevArrow: '<button type="button" class="slick-prev fa fa-chevron-left"><span class="tts">이전</span></button>',
-		nextArrow: '<button type="button" class="slick-next fa fa-chevron-right"><span class="tts">다음</span></button>',
-		swipe: false,
-		touchMove: true,
-		easing: 'easeOutQuint',
+	$(function () {
+		var currentWidth = $('.portfolio-list .active').width();
+		$('.portfolio-list').css('margin-left', - currentWidth / 2);
+	});
+
+	var portfolioSlider = $('.portfolio-list').bxSlider({
+		auto: true,
+		autoHover: true,
 		speed: 1500,
-		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		centerMode: true,
-		centerPadding: 0,
-		variableWidth: true,
-		initialSlide: 0,
-		pauseOnDotsHover: false,
-		pauseOnFocus: false,
-		//		pauseOnHover: false,
-		responsive: [
-			{
-				breakpoint: 1025,
-				settings: {
-					swipe: true,
-					speed: 600
-				}
-			}
-		]
+		pause: 4000,
+		minSlides: 1,
+		maxSlides: 6,
+		pager: false,
+		prevText: '<span class="fa fa-chevron-left"><span class="tts">이전</span></span>',
+		nextText: '<span class="fa fa-chevron-right"><span class="tts">다음</span></span>',
+		onSliderLoad: function(currentIndex) {
+			$('.portfolio-list').children().eq(currentIndex).addClass('active');
+		},
+		onSlideBefore: function($slideElement){
+			$('.portfolio-list').children().removeClass('active');
+			$slideElement.addClass('active');
+
+			var currentWidth = $('.portfolio-list .active').width();
+			$('.portfolio-list').css('margin-left', - currentWidth / 2);
+		},
+		onSlideAfter: function() {
+			portfolioSlider.stopAuto();
+			portfolioSlider.startAuto();
+		}
 	});
 
 	// 포트폴리오 상세 레이어팝업
