@@ -137,35 +137,30 @@ if ($('body').hasClass('main')) {
 	});
 
 	// 포트폴리오 슬라이더
-	$(function () {
-		var currentWidth = $('.portfolio-list .active').width();
-		$('.portfolio-list').css('margin-left', - currentWidth / 2);
-	});
-
-	var portfolioSlider = $('.portfolio-list').bxSlider({
-		auto: true,
-		autoHover: true,
-		speed: 1500,
-		pause: 4000,
-		minSlides: 1,
-		maxSlides: 6,
-		pager: false,
-		prevText: '<span class="fa fa-chevron-left"><span class="tts">이전</span></span>',
-		nextText: '<span class="fa fa-chevron-right"><span class="tts">다음</span></span>',
-		onSliderLoad: function(currentIndex) {
-			$('.portfolio-list').children().eq(currentIndex).addClass('active');
-		},
-		onSlideBefore: function($slideElement){
-			$('.portfolio-list').children().removeClass('active');
-			$slideElement.addClass('active');
-
-			var currentWidth = $('.portfolio-list .active').width();
-			$('.portfolio-list').css('margin-left', - currentWidth / 2);
-		},
-		onSlideAfter: function() {
-			portfolioSlider.stopAuto();
-			portfolioSlider.startAuto();
-		}
+	$(document).ready(function() {
+		$('.portfolio-list').owlCarousel({
+			loop: true,
+			fallbackEasing: 'easeOutQuint',
+			center: true,
+			autoplay: true,
+			autoplaySpeed: 1500,
+			dragEndSpeed: 600,
+			autoplayHoverPause: true,
+			mouseDrag: true,
+			touchDrag: true,
+			autoWidth: true,
+			dots: false,
+			nav: true,
+			navSpeed: 600,
+			navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>','<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
+			responsive:{
+				1025:{
+					mouseDrag: false,
+					touchDrag: false,
+					navSpeed: 1500
+				}
+			}
+		});
 	});
 
 	// 포트폴리오 상세 레이어팝업
@@ -185,7 +180,7 @@ if ($('body').hasClass('main')) {
 
 		$('.portfolio-popup').attr('id',tg);
 		var fileName = $('.portfolio-popup').attr('id');
-		$('.portfolio-popup').load('html/'+fileName+'.html');
+		$('.portfolio-popup').load('html/'+fileName);
 	}).on('click', '.btn-close-popup', function (e) {
 		var target = $(this).closest('.portfolio-popup').attr('id');
 		modalClose('#' + target, modalOpener);
