@@ -154,8 +154,6 @@ if ($('body').hasClass('main')) {
 		navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>','<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
 		responsive:{
 			1025:{
-				mouseDrag: false,
-				touchDrag: false,
 				navSpeed: 1500
 			}
 		}
