@@ -137,30 +137,28 @@ if ($('body').hasClass('main')) {
 	});
 
 	// 포트폴리오 슬라이더
-	$(document).ready(function() {
-		$('.portfolio-list').owlCarousel({
-			loop: true,
-			fallbackEasing: 'easeOutQuint',
-			center: true,
-			autoplay: true,
-			autoplaySpeed: 1500,
-			dragEndSpeed: 600,
-			autoplayHoverPause: true,
-			mouseDrag: true,
-			touchDrag: true,
-			autoWidth: true,
-			dots: false,
-			nav: true,
-			navSpeed: 600,
-			navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>','<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
-			responsive:{
-				1025:{
-					mouseDrag: false,
-					touchDrag: false,
-					navSpeed: 1500
-				}
+	$('.portfolio-list').owlCarousel({
+		loop: true,
+		fallbackEasing: 'easeOutQuint',
+		center: true,
+		autoplay: true,
+		autoplaySpeed: 1500,
+		dragEndSpeed: 600,
+		autoplayHoverPause: true,
+		mouseDrag: true,
+		touchDrag: true,
+		autoWidth: true,
+		dots: false,
+		nav: true,
+		navSpeed: 600,
+		navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>','<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
+		responsive:{
+			1025:{
+				mouseDrag: false,
+				touchDrag: false,
+				navSpeed: 1500
 			}
-		});
+		}
 	});
 
 	// 포트폴리오 상세 레이어팝업
