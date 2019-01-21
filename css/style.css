@@ -525,9 +525,9 @@ section h3 {
 }
 
 .owl-carousel .owl-stage {
-	position: relative; 
+	position: relative;
 }
-  
+
 .owl-carousel .owl-stage:after {
 	content: '';
 	display: block;
@@ -2008,6 +2008,11 @@ div.chat-admin {
 
 	.portfolio-body .pc .pc-area span {
 		margin: 5px;
+	}
+
+	.portfolio-header .view-btn .btn-more {
+		font-size: 14px;
+		padding: 10px 4px 10px 7px;
 	}
 }
 

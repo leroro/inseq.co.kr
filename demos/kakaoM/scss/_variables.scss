@@ -1,0 +1,50 @@
+//
+// 변수설정
+//
+
+// 색상
+$primary: #C80101 !default;
+$darkgray: #3c3c3c !default;
+$blue: #014cc8;
+
+$line-dark: #777;
+$line-base: #aeaeae;
+$line-light: #e6e6e6;
+
+$bg-dark: #f1f1f1;
+$bg-base: #f9f9f9;
+$bg-light: #fff;
+$bg-primary: #ffe8e8;
+
+// 글꼴
+$font-size-base: 13px !default;
+$font-size-lg: 16px !default;
+$font-size-xl: 22px !default;
+
+$font-family-base: 'NotoSansKR',
+'AppleSDGothicNeo-Regular',
+'맑은 고딕',
+'Malgun Gothic',
+'돋움',
+dotum,
+sans-serif;
+$font-weight-base: 400;
+$font-weight-bold: 700;
+
+$line-height-base: 1.307692307692308 !default;
+$line-height-lg: 20px !default;
+$line-height-xl: 26px !default;
+
+// 경로
+$url-fonts: "../fonts/";
+$url-images: "../images/";
+
+// 그리드
+$content-width: 1380px;
+$content-padding-v: 15px;
+$content-padding-h: 35px;
+
+// 폼 컨트롤 사이즈
+$height-base: 27px;
+$height-lg: 34px;
+$height-xl: 44px;

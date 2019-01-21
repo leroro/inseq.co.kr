@@ -1,0 +1,100 @@
+/* 고유 콘텐츠 */
+.ico-file {
+	width: 24px;
+	height: 25px;
+	background: url(#{$url-images}ico-file.png) no-repeat center center;
+}
+
+.ico-file-del {
+	width: 27px;
+	height: 27px;
+	background: url(#{$url-images}ico-file-del.png) no-repeat center center;
+	background-size: auto;
+}
+
+.ico-file-closed {
+	width: 16px;
+	height: 16px;
+	background: url(#{$url-images}ico-file-closed.png) no-repeat center 40%;
+}
+
+.table td {
+	line-height: 1.5;
+}
+
+.table-fulfill {
+
+	select {
+		width: 150px;
+	}
+
+	input[type="text"] {
+		width: 300px;
+	}
+
+}
+
+.condi-list {
+	display: inline-block;
+	width: 100px;
+}
+
+.choice-list {
+	margin-left: 30px;
+}
+
+.choice-list-view {
+	margin-left: 0;
+	margin-right: 30px;
+}
+
+.select-list {
+	div {
+		display: inline-block;
+		min-width: 210px;
+		max-width: 50%;
+		vertical-align: middle;
+	}
+
+	.yesorno {
+
+		&:before {
+			display: inline-block;
+			content: '(';
+			vertical-align: middle;
+		}
+
+		&:after {
+			display: inline-block;
+			content: ')';
+			vertical-align: middle;
+		}
+
+		span {
+			vertical-align: middle;
+
+			+ span {
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+.result-inquire select {
+	background-color: #fff;
+}
+
+.no-result {
+	width: 100%;
+	height: 300px;
+	background-color: #eee;
+	display: table;
+	margin-bottom: 20px;
+
+	p {
+		text-align: center;
+		font-size: 25px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
