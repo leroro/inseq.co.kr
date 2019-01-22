@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>FirstQpay</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css" media="all">
+	<script src="../js/jquery.1.10.2.min.js" charset="utf-8"></script>
+	<script src="../js/jquery.easing.1.3.min.js" charset="utf-8"></script>
+	<script src="../js/slick.min.js" charset="utf-8"></script>
+	<script>
+		$(function() {
+			var $status = $('.banner-pager');
+			var $slickElement = $('.banner-list');
+			$slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+				var i = (currentSlide ? currentSlide : 0) + 1;
+				$status.text(i + '/' + slick.slideCount);
+			});
+
+			$slickElement.slick({
+				dots: true,
+				arrows: false,
+				easing: 'easeOutQuint',
+				speed: 1500,
+				pauseOnHover: false,
+				pauseOnDotsHover: false,
+				pauseOnFocus: false,
+				autoplay: true,
+				autoplaySpeed: 3500,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+
+			var $slickCard = $('.card-list');
+			$slickCard.on('init reInit', function(event, slick) {
+				if (slick.slideCount == 1) {
+					$('.card-list-pager').hide();
+				}
+			});
+			$slickCard.slick({
+				dots: true,
+				dotsClass: 'card-list-pager',
+				arrows: false,
+				easing: 'easeOutQuint',
+				speed: 1500,
+				pauseOnHover: false,
+				pauseOnDotsHover: false,
+				pauseOnFocus: false,
+				autoplay: false,
+				autoplaySpeed: 3500,
+				waitForAnimate: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				centerMode: true,
+				centerPadding: 0,
+				variableWidth: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<header id="header">
+		<h1 id="logo"><a href="#">FirstQ Pay</a></h1>
+		<a href="#" class="btn-ourhome-wallet">아워홈 전자지갑</a>
+	</header>
+	<article id="content">
+		<div class="banner-area">
+			<ul class="banner-list">
+				<li><a href="#"><img src="../images/_img-banner2.png" alt=""></a></li>
+				<li><a href="#"><img src="../images/_img-banner2.png" alt=""></a></li>
+			</ul>
+			<p class="banner-pager"></p>
+		</div>
+		<div class="card-area">
+			<ul class="card-list">
+				<li class="card-item">
+					<div class="card-blue card-img">
+						<img src="../images/logo-card-hyundai.png" alt="HyundaiCard" class="card-logo">
+						<span class="card-name">현대카드</span>
+						<div class="card-num">
+							<span>****</span>
+							<span>****</span>
+							<span>****</span>
+							<span class="last-num">6248</span>
+						</div>
+						<button type="button" class="btn-delete">삭제</button>
+					</div>
+				</li>
+				<li class="card-item">
+					<div class="card-orange card-img">
+						<img src="../images/logo-card-bc.png" alt="BCcard" class="card-logo">
+						<span class="card-name">BC카드</span>
+						<div class="card-num">
+							<span>****</span>
+							<span>****</span>
+							<span>****</span>
+							<span class="last-num">6248</span>
+						</div>
+						<button type="button" class="btn-delete">삭제</button>
+					</div>
+				</li>
+				<li class="card-item">
+					<div class="card-skyblue card-img">
+						<img src="../images/logo-card-kb.png" alt="KB국민카드" class="card-logo">
+						<span class="card-name">KB국민카드</span>
+						<div class="card-num">
+							<span>****</span>
+							<span>****</span>
+							<span>****</span>
+							<span class="last-num">6248</span>
+						</div>
+						<button type="button" class="btn-delete">삭제</button>
+					</div>
+				</li>
+				<li class="card-item">
+					<div class="card-red card-img">
+						<img src="../images/logo-card-nh.png" alt="NH농협카드" class="card-logo">
+						<span class="card-name">NH농협카드</span>
+						<div class="card-num">
+							<span>****</span>
+							<span>****</span>
+							<span>****</span>
+							<span class="last-num">6248</span>
+						</div>
+						<button type="button" class="btn-delete">삭제</button>
+					</div>
+				</li>
+				<li class="card-item">
+					<div class="card-green card-img">
+						<img src="../images/logo-card-shinhyup.png" alt="신협" class="card-logo">
+						<span class="card-name">신협카드</span>
+						<div class="card-num">
+							<span>****</span>
+							<span>****</span>
+							<span>****</span>
+							<span class="last-num">6248</span>
+						</div>
+						<button type="button" class="btn-delete">삭제</button>
+					</div>
+				</li>
+				<!-- 카드등록 전 -->
+				<li class="card-item">
+					<div class="card-empty card-img">
+						<button type="button" class="btn-payment-add">결재수단 등록</button>
+					</div>
+				</li>
+				<!-- // 카드등록 전 -->
+			</ul>
+		</div>
+		<!-- 카드등록 후 -->
+		<div class="btn-area btn-area-card">
+			<span class="btn-col"><a href="#"><span class="ico ico-pay-list"></span>결제내역</a>
+			</span>
+			<span class="btn-col"><a href="#"><span class="ico ico-setting"></span>설정</a>
+			</span>
+		</div>
+		<div class="info-area">
+			<div class="info-inner">
+				<div>
+					<img src="../images/ico-pin-touch.png" alt="" class="ico-info">
+				</div>
+				
+				<!--
+				<div>
+					<img src="../images/ico-fingerprint-off.png" alt="" class="ico-info">
+					<p class="msg">지문인증 사용설정이 되어있지 않습니다.<br> 설정 후 사용하여 주세요.</p>
+					<div class="btn-area btn-area-fingerprint">
+						<a href="#" class="btn-ulderline">지문인증설정하기</a>
+					</div>
+				</div>
+				-->
+
+				<!-- 
+				<div>
+					<img src="../images/ico-fingerprint-on.png" alt="" class="ico-info">
+					<p class="msg">지문이 일치하지 않습니다.<br> 다시 시도하여 주세요. (1/5)</p>
+					<p class="msg">지문을 인증중입니다.</p>
+					<p class="msg">결제를 하려면 지문을<br> 인증하세요.</p>
+				</div> 
+				-->
+			</div>
+		</div>
+		<div class="btn-area btn-pin-pay">
+			<a href="#" class="btn btn-primary">PIN 번호로 결제하기</a>
+		</div>
+		<!-- // 카드등록 후 -->
+	</article>
+</body>
+</html>

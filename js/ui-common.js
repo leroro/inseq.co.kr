@@ -28,14 +28,14 @@ $(function () {
 	}).on('mouseleave', function () {
 		$(this).removeClass('hover');
 	});
-	$('.portfolio-list a').on('click', function () {
-		return false;
+	$('.portfolio-list a').on('click', function (e) {
+		e.preventDefault();
 	});
 
-	// 전체메뉴
-	$('.portfolio-list a').on('click', function () {
-		return false;
-	});
+	//	// 전체메뉴
+	//	$('.portfolio-list a').on('click', function () {
+	//		return false;
+	//	});
 });
 
 // 견적문의
@@ -136,36 +136,151 @@ if ($('body').hasClass('main')) {
 		}
 	});
 
+	// 포트폴리오 썸네일 목록 data 구현
+	$('.portfolio-open').each(function () {
+		var tg = $(this);
+		var dataImage = tg.data('image');
+		var dataTitle = tg.data('title');
+		var dataDate = tg.data('date');
+		var dataTag = tg.data('tag');
+
+		tg.append('<div class="hover-content"><dl><dt class="hover-tit">'+dataTitle+'</dt><dd><p class="date">'+dataDate+'</p><ul class="hash-tag-wrap"></ul></dd></dl></div>');
+
+		$.each(dataImage, function(index, value){
+			$('.hover-content', tg).before('<img src="images/'+value+'" alt="'+dataTitle+'">');
+		});
+		$.each(dataTag, function(index, value){
+			$('.hash-tag-wrap', tg).append('<li>'+value+'</li>');
+		});
+	});
+
 	// 포트폴리오 슬라이더
-	$('.portfolio-list').slick({
-		dots: false,
-		arrows: true,
-		prevArrow: '<button type="button" class="slick-prev fa fa-chevron-left"><span class="tts">이전</span></button>',
-		nextArrow: '<button type="button" class="slick-next fa fa-chevron-right"><span class="tts">다음</span></button>',
-		swipe: false,
-		touchMove: true,
-		easing: 'easeOutQuint',
-		speed: 1500,
-		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		centerMode: true,
-		centerPadding: 0,
-		variableWidth: true,
-		initialSlide: 2,
-		pauseOnDotsHover: false,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		responsive: [
-			{
-				breakpoint: 1025,
-				settings: {
-					swipe: true,
-					speed: 600
+	$(window).load(function(){
+		$('.portfolio-list').owlCarousel({
+			loop: true,
+			fallbackEasing: 'easeOutQuint',
+			center: true,
+			autoplay: true,
+			autoplaySpeed: 1500,
+			dragEndSpeed: 600,
+			autoplayHoverPause: true,
+			mouseDrag: true,
+			touchDrag: true,
+			autoWidth: true,
+			dots: false,
+			nav: true,
+			navSpeed: 600,
+			navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>','<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
+			responsive:{
+				1025:{
+					navSpeed: 1500
 				}
 			}
-		]
+		});
+	});
+
+	// 포트폴리오 상세 레이어팝업
+	$(function () {
+		$('.main').append('<div class="portfolio-popup"></div>');
+
+		$('.portfolio-popup.show').each(function () {
+			modalOpen($(this), null);
+		});
+	});
+
+	var modalOpener = null;
+	$(document).on('click', 'a.portfolio-open', function (e) {
+		var tg = $(this).attr('href');
+		modalOpen('.portfolio-popup', modalOpener);
+		e.preventDefault();
+
+		$('.portfolio-popup').attr('id',tg);
+		var fileName = $('.portfolio-popup').attr('id');
+		$('.portfolio-popup').load('portfolio/'+fileName);
+	}).on('click', '.btn-close-popup', function (e) {
+		var target = $(this).closest('.portfolio-popup').attr('id');
+		modalClose('#' + target, modalOpener);
+		e.preventDefault();
+	}).on('keydown', '.portfolio-popup .btn-close-popup', function (e) {
+		if (e.keyCode == 9 && !e.shiftKey) { // tab
+			e.preventDefault();
+			$(this).siblings('.portfolio-title').attr('tabindex', '0').focus();
+		}
+	}).on('keydown', '.portfolio-title', function (e) {
+		if (e.keyCode == 9 && e.shiftKey) { // shift + tab
+			e.preventDefault();
+			$(this).siblings('.btn-close-popup').focus();
+		}
+	});
+
+	function modalOpen(_target, _opener) {
+		modalOpener = _opener;
+		$(_target).fadeIn('fast').addClass('show').find('.portfolio-title').attr('tabindex', '0').focus();
+		bodyScroll(true, $('body').width());
+	}
+
+	function modalClose(_target, _opener) {
+
+		bodyScroll(false);
+		var tg = null;
+
+		if (_opener) {
+			tg = $(_target);
+			modalOpener = $(_opener);
+		} else {
+			tg = $('.portfolio-popup.show');
+			modalOpener = null;
+		}
+
+		$(tg).hide().removeClass('show');
+		if (modalOpener !== null) {
+			modalOpener.focus();
+			modalOpener = null;
+		}
+	}
+
+	function bodyScroll(_status, _orgWidth) {
+		var $fixedObj = $('body, .fixed');
+		if (_status) {
+			$('body').addClass('portfolio-opened');
+			if ($('html').get(0).scrollWidth > $('html').width() === false) {
+				$fixedObj.css('margin-right', $('body').width() - _orgWidth);
+			}
+		} else {
+			$fixedObj.css('margin-right', '');
+			$('body').removeClass('portfolio-opened');
+		}
+	}
+
+	// 포트폴리오 hover 효과
+	$(document).on('mouseenter', '.portfolio-list a', function () {
+		$(this).find('.hover-content').show().stop().animate({
+			'opacity': 1,
+			'duration': 5000
+		});
+		if ($(window).width()) {
+			if ($(this).attr('class') == "portfolio-list a") {
+				$(this).find('.hover-content .hash-tag-wrap').stop().animate({
+					'opacity': 1,
+					'top': '0'
+				});
+			} else {
+				$(this).find('.hover-content dl').stop().animate({
+					'opacity': 1,
+					'top': '50%'
+				});
+			}
+		}
+	});
+
+	$(document).on('mouseleave', '.portfolio-list a', function () {
+		$(this).find('.hover-content').show().stop().animate({
+			'opacity': 0
+		});
+
+		$(this).find('.hover-content dl').stop().animate({
+			'opacity': 0,
+			'top': '100%'
+		});
 	});
 }
