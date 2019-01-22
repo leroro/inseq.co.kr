@@ -136,27 +136,47 @@ if ($('body').hasClass('main')) {
 		}
 	});
 
+	// 포트폴리오 썸네일 목록 data 구현
+	$('.portfolio-open').each(function () {
+		var tg = $(this);
+		var dataImage = tg.data('image');
+		var dataTitle = tg.data('title');
+		var dataDate = tg.data('date');
+		var dataTag = tg.data('tag');
+
+		tg.append('<div class="hover-content"><dl><dt class="hover-tit">'+dataTitle+'</dt><dd><p class="date">'+dataDate+'</p><ul class="hash-tag-wrap"></ul></dd></dl></div>');
+
+		$.each(dataImage, function(index, value){
+			$('.hover-content', tg).before('<img src="images/'+value+'" alt="'+dataTitle+'">');
+		});
+		$.each(dataTag, function(index, value){
+			$('.hash-tag-wrap', tg).append('<li>'+value+'</li>');
+		});
+	});
+
 	// 포트폴리오 슬라이더
-	$('.portfolio-list').owlCarousel({
-		loop: true,
-		fallbackEasing: 'easeOutQuint',
-		center: true,
-		autoplay: true,
-		autoplaySpeed: 1500,
-		dragEndSpeed: 600,
-		autoplayHoverPause: true,
-		mouseDrag: true,
-		touchDrag: true,
-		autoWidth: true,
-		dots: false,
-		nav: true,
-		navSpeed: 600,
-		navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>','<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
-		responsive:{
-			1025:{
-				navSpeed: 1500
+	$(window).load(function(){
+		$('.portfolio-list').owlCarousel({
+			loop: true,
+			fallbackEasing: 'easeOutQuint',
+			center: true,
+			autoplay: true,
+			autoplaySpeed: 1500,
+			dragEndSpeed: 600,
+			autoplayHoverPause: true,
+			mouseDrag: true,
+			touchDrag: true,
+			autoWidth: true,
+			dots: false,
+			nav: true,
+			navSpeed: 600,
+			navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>','<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
+			responsive:{
+				1025:{
+					navSpeed: 1500
+				}
 			}
-		}
+		});
 	});
 
 	// 포트폴리오 상세 레이어팝업
@@ -263,5 +283,4 @@ if ($('body').hasClass('main')) {
 			'top': '100%'
 		});
 	});
-
 }
