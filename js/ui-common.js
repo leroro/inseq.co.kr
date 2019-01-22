@@ -196,7 +196,7 @@ if ($('body').hasClass('main')) {
 
 		$('.portfolio-popup').attr('id',tg);
 		var fileName = $('.portfolio-popup').attr('id');
-		$('.portfolio-popup').load('html/'+fileName);
+		$('.portfolio-popup').load('portfolio/'+fileName);
 	}).on('click', '.btn-close-popup', function (e) {
 		var target = $(this).closest('.portfolio-popup').attr('id');
 		modalClose('#' + target, modalOpener);
