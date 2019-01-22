@@ -205,6 +205,7 @@ a {
 	0% {
 		opacity: 1;
 	}
+
 	50% {
 		opacity: 0;
 	}
@@ -214,6 +215,7 @@ a {
 	0% {
 		opacity: 1;
 	}
+
 	50% {
 		opacity: 0;
 	}
@@ -225,11 +227,13 @@ a {
 		-ms-transform: translate(0, -50px) scale(1);
 		-webkit-transform: translate(0, -50px) scale(1);
 	}
+
 	50% {
 		transform: translate(-100px, -200px) scale(1.5);
 		-ms-transform: translate(-100px, -200px) scale(1.5);
 		-webkit-transform: translate(-100px, -200px) scale(1.5);
 	}
+
 	100% {
 		transform: translate(0, -50px) scale(1);
 		-ms-transform: translate(0, -50px) scale(1);
@@ -355,6 +359,7 @@ a {
 		-ms-transform: translateY(3px);
 		-webkit-transform: translateY(3px);
 	}
+
 	100% {
 		transform: translateY(-3px);
 		-webkit-transform: translateY(-3px);
@@ -645,6 +650,7 @@ section h3 {
 
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
+
 	.win8gt #home,
 	.win8gt #learn {
 		background-attachment: scroll;
@@ -705,7 +711,7 @@ section h3 {
 }
 
 .partners-list li:nth-child(1) img {
-	max-height: 45px;
+	max-height: 55px;
 	opacity: 0.8;
 }
 
@@ -996,14 +1002,17 @@ div.chat-admin {
 		-ms-transform: translateY(-60px);
 		-webkit-transform: translateY(-60px);
 	}
+
 	.sub-section .inner {
 		position: relative;
 		padding-left: 220px;
 		max-width: 900px;
 	}
+
 	.title-center {
 		font-size: 40px;
 	}
+
 	.sub-section h2 {
 		position: absolute;
 		left: 0;
@@ -1011,47 +1020,58 @@ div.chat-admin {
 		font-size: 30px;
 		padding-left: 20px;
 	}
+
 	.sub-section .inner,
 	.sub-section h2 {
 		padding-top: 80px;
 		padding-bottom: 80px;
 	}
+
 	.sub-section h2,
 	.sub-section h2 + * {
 		margin-top: 0;
 	}
+
 	#home-learn .inner {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+
 	#who-we-are {
 		position: relative;
 	}
+
 	.company-intro img {
 		float: left;
 		margin: 6px 40px 10px 0;
 	}
+
 	.service {
 		padding: 0 5px;
 		overflow: hidden;
 	}
+
 	.service dl {
 		float: left;
 		padding: 0 15px;
 		width: 25%;
 		overflow: hidden;
 	}
+
 	.service dt {
 		clear: both;
 	}
+
 	.service .tag-list {
 		margin-top: 1em;
 	}
+
 	#map {
 		height: 400px;
 		float: left;
 		width: calc(100% - 420px);
 	}
+
 	.location-info {
 		width: 420px;
 		float: right;
@@ -1059,6 +1079,7 @@ div.chat-admin {
 		padding-left: 45px;
 		overflow: hidden;
 	}
+
 	/* 런시퀀스 */
 	.learnseq-benefit {
 		max-width: 1000px;
@@ -1066,6 +1087,7 @@ div.chat-admin {
 		text-align: center;
 		overflow: hidden;
 	}
+
 	.learnseq-benefit .col {
 		display: inline-block;
 		vertical-align: top;
@@ -1080,12 +1102,15 @@ div.chat-admin {
 		width: 50%;
 		margin-bottom: 20px;
 	}
+
 	.service dl:nth-child(odd) {
 		clear: both;
 	}
+
 	.service dl:nth-child(3) {
 		float: right;
 	}
+
 	.location-info {
 		padding-left: 40px;
 	}
@@ -1102,6 +1127,7 @@ div.chat-admin {
 		text-align: center;
 		padding: 50px 20px;
 	}
+
 	#learn:before {
 		position: absolute;
 		left: 0;
@@ -1112,23 +1138,29 @@ div.chat-admin {
 		background: #000;
 		opacity: 0.3;
 	}
+
 	#learn .btn-learn {
 		font-size: 18px;
 		padding: 0 20px;
 	}
+
 	.location-info {
 		padding-left: 30px;
 	}
+
 	.location-address br {
 		display: none;
 	}
+
 	.partners-list li {
 		margin: 0 10px 20px;
 	}
+
 	.footer .logo-btm {
 		width: 76px;
 		overflow: hidden;
 	}
+
 	.footer .inner {
 		padding-left: 100px;
 	}
@@ -1138,24 +1170,30 @@ div.chat-admin {
 	html {
 		font-size: 14px;
 	}
+
 	.header .nav-bar {
 		padding-left: 10px;
 	}
+
 	.header-hide .nav-bar {
 		transform: translateY(-60px);
 		-ms-transform: translateY(-60px);
 		-webkit-transform: translateY(-60px);
 	}
+
 	section .inner {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+
 	.brand .word-seq {
 		display: none;
 	}
+
 	#home-learnbr {
 		display: none;
 	}
+
 	#home:before {
 		position: absolute;
 		left: 0;
@@ -1166,10 +1204,12 @@ div.chat-admin {
 		z-index: 110;
 		content: '';
 	}
+
 	#btn-allmenu,
 	#btn-allmenu-close {
 		display: block;
 	}
+
 	#gnb {
 		display: none;
 		position: absolute;
@@ -1183,53 +1223,66 @@ div.chat-admin {
 		-webkit-transition-duration: .3s;
 		z-index: 800;
 	}
+
 	#gnb.show {
 		display: block;
 	}
+
 	#btn-allmenu {
 		display: block;
 	}
+
 	#gnb ul,
 	#btn-allmenu-close {
 		transition-duration: .3s;
 		-webkit-transition-duration: .3s;
 	}
+
 	#gnb a {
 		color: #fff;
 		padding-top: 0;
 		border: 3px solid transparent;
 	}
+
 	#gnb a.active {
 		color: #f49ac0;
 		border-color: #f49ac0;
 	}
+
 	#gnb li {
 		display: block;
 		text-align: center;
 		margin: 0 2px;
 	}
+
 	.service dl {
 		width: 100%;
 		margin-bottom: 2em;
 	}
+
 	.footer {
 		padding: 0 25px;
 	}
+
 	.footer .logo-btm {
 		display: none;
 	}
+
 	.footer .inner {
 		padding-left: 110px;
 	}
+
 	.footer address {
 		position: static;
 		padding-right: 0;
 	}
+
 	.footer .btn-kakaoplus {
 		left: 0;
 		top: 30px;
 		right: auto;
 	}
+
 	.btn-kakaoplus img {
 		height: 35px;
 	}
@@ -1239,13 +1292,16 @@ div.chat-admin {
 	.contact-title {
 		font-size: 20px;
 	}
+
 	.contact-title span {
 		display: none;
 	}
+
 	#home .btn-learn {
 		padding-left: 68px;
 		background-position: 15px center;
 	}
+
 	.btn-learn .word {
 		display: none;
 	}
@@ -1255,9 +1311,11 @@ div.chat-admin {
 	.header {
 		padding-right: 0;
 	}
+
 	#gnb {
 		font-size: 15px;
 	}
+
 	.slogan {
 		letter-spacing: -0.02em;
 	}
@@ -1267,9 +1325,11 @@ div.chat-admin {
 	.brand a {
 		padding: 0 20px;
 	}
+
 	#gnb {
 		font-size: 14px;
 	}
+
 	.slogan {
 		font-size: 17px;
 	}
