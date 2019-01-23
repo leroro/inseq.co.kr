@@ -242,7 +242,6 @@
 		}
 		gtag('js', new Date());
 		gtag('config', 'UA-123672562-1');
-
 	</script>
 
 	<!-- 카카오 플러스친구 -->
@@ -253,7 +252,6 @@
 			container: '#plusfriend-chat-button',
 			plusFriendId: '_xdxkhZC'
 		});
-
 	</script>
 
 	<!-- 네이버지도 API -->
@@ -280,7 +278,13 @@
 		var infowindow = new naver.maps.InfoWindow({
 			content: '<p class="location-marker">인시퀀스</p>'
 		});
-
+	</script>
+	<script>
+		//썸네일클릭시 멈춤
+		var owl = $('.portfolio-list.owl-carousel');
+		$('.portfolio-list .hover-content').on('click', function() {
+			owl.trigger('stop.owl.autoplay');
+		});
 	</script>
 </body>
 
