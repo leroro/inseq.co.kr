@@ -183,7 +183,7 @@ if ($('body').hasClass('main')) {
 
 	// 포트폴리오 상세 레이어팝업
 	$(function () {
-		$('.main').append('<div class="portfolio-popup"></div>');
+		$('.main').append('<div class="portfolio-popup"><div class="portfolio-inner"><div class="portfolio-loading"><div class="loader"><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__ball"></div></div></div><div class="portfolio-content"></div><a href="#" class="btn-close-popup">닫기</a></div></div>');
 
 		$('.portfolio-popup.show').each(function () {
 			modalOpen($(this), null);
@@ -196,16 +196,18 @@ if ($('body').hasClass('main')) {
 		modalOpen('.portfolio-popup', modalOpener);
 		e.preventDefault();
 
-		$('#loading').show().delay(300).fadeOut(1000);
-		$('.portfolio-popup').attr('id', tg);
-		var fileName = $('.portfolio-popup').attr('id');
-		$('.portfolio-popup').load(fileName);
+		$('.portfolio-loading').show();
+		$('.portfolio-content').load(tg, function(data, status) {
+			if (status == "success") {
+				$('.portfolio-loading').fadeOut(1000);
+			}
+		});
 	}).on('click', '.btn-close-popup', function (e) {
 		var target = $(this).closest('.portfolio-popup').attr('id');
 		modalClose('#' + target, modalOpener);
 		e.preventDefault();
 
-		$('.portfolio-inner').remove();
+		$('.portfolio-content').empty();
 	}).on('keydown', '.portfolio-popup .btn-close-popup', function (e) {
 		if (e.keyCode == 9 && !e.shiftKey) { // tab
 			e.preventDefault();

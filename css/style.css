@@ -1063,13 +1063,24 @@ div.chat-admin {
 	position: relative;
 	width: 720px;
 	max-width: 100%;
+	min-height: calc(100vh - 25px);
 	margin: 50px auto;
 	color: #fff;
 	text-align: center;
 	border-radius: 30px;
 	overflow: hidden;
-	background-color: rgba(0, 0, 0, 100);
+	background-color: #000;
 	z-index: 10;
+}
+
+.portfolio-loading {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 100;
 }
 
 .portfolio-header {
