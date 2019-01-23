@@ -1074,14 +1074,14 @@ div.chat-admin {
 
 .portfolio-header {
 	padding: 60px 74px 40px;
-	background-image: url(../images/bg-pf-popup.png);
+	background-image: url(../images/bg-pf-popup.jpg);
 	background-repeat: no-repeat;
 	background-position: center 40%;
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-body {
-	background-image: url(../images/bg-pf-popup2.png);
+	background-image: url(../images/bg-pf-popup2.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 }
