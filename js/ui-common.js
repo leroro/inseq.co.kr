@@ -196,6 +196,7 @@ if ($('body').hasClass('main')) {
 		modalOpen('.portfolio-popup', modalOpener);
 		e.preventDefault();
 
+		$('#loading').show().delay(300).fadeOut(1000);
 		$('.portfolio-popup').attr('id', tg);
 		var fileName = $('.portfolio-popup').attr('id');
 		$('.portfolio-popup').load(fileName);
@@ -203,6 +204,8 @@ if ($('body').hasClass('main')) {
 		var target = $(this).closest('.portfolio-popup').attr('id');
 		modalClose('#' + target, modalOpener);
 		e.preventDefault();
+
+		$('.portfolio-inner').remove();
 	}).on('keydown', '.portfolio-popup .btn-close-popup', function (e) {
 		if (e.keyCode == 9 && !e.shiftKey) { // tab
 			e.preventDefault();
