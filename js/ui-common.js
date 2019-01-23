@@ -144,18 +144,18 @@ if ($('body').hasClass('main')) {
 		var dataDate = tg.data('date');
 		var dataTag = tg.data('tag');
 
-		tg.append('<div class="hover-content"><dl><dt class="hover-tit">'+dataTitle+'</dt><dd><p class="date">'+dataDate+'</p><ul class="hash-tag-wrap"></ul></dd></dl></div>');
+		tg.append('<div class="hover-content"><dl><dt class="hover-tit">' + dataTitle + '</dt><dd><p class="date">' + dataDate + '</p><ul class="hash-tag-wrap"></ul></dd></dl></div>');
 
-		$.each(dataImage, function(index, value){
-			$('.hover-content', tg).before('<img src="images/'+value+'" alt="'+dataTitle+'">');
+		$.each(dataImage, function (index, value) {
+			$('.hover-content', tg).before('<img src="images/' + value + '" alt="' + dataTitle + '">');
 		});
-		$.each(dataTag, function(index, value){
-			$('.hash-tag-wrap', tg).append('<li>'+value+'</li>');
+		$.each(dataTag, function (index, value) {
+			$('.hash-tag-wrap', tg).append('<li>' + value + '</li>');
 		});
 	});
 
 	// 포트폴리오 슬라이더
-	$(window).load(function(){
+	$(window).load(function () {
 		$('.portfolio-list').owlCarousel({
 			loop: true,
 			fallbackEasing: 'easeOutQuint',
@@ -170,9 +170,9 @@ if ($('body').hasClass('main')) {
 			dots: false,
 			nav: true,
 			navSpeed: 600,
-			navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>','<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
-			responsive:{
-				1025:{
+			navText: ['<span class="fa fa-chevron-left"><span class="tts">이전</span></span>', '<span class="fa fa-chevron-right"><span class="tts">다음</span></span>'],
+			responsive: {
+				1025: {
 					mouseDrag: false,
 					touchDrag: false,
 					navSpeed: 1500
@@ -196,9 +196,9 @@ if ($('body').hasClass('main')) {
 		modalOpen('.portfolio-popup', modalOpener);
 		e.preventDefault();
 
-		$('.portfolio-popup').attr('id',tg);
+		$('.portfolio-popup').attr('id', tg);
 		var fileName = $('.portfolio-popup').attr('id');
-		$('.portfolio-popup').load('portfolio/'+fileName);
+		$('.portfolio-popup').load(fileName);
 	}).on('click', '.btn-close-popup', function (e) {
 		var target = $(this).closest('.portfolio-popup').attr('id');
 		modalClose('#' + target, modalOpener);
