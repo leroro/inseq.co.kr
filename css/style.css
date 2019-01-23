@@ -470,11 +470,13 @@ a {
 	overflow: hidden;
 }
 
+#map * {
+	box-sizing: content-box;
+}
+
 .location-marker {
-	text-align: center;
 	margin: 0;
-	max-width: 200px;
-	padding: 10px 20px;
+	padding: 10px 40px;
 	font-weight: 600;
 	font-size: 18px;
 }
