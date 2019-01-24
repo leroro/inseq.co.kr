@@ -196,10 +196,11 @@ if ($('body').hasClass('main')) {
 		modalOpen('.portfolio-popup', modalOpener);
 		e.preventDefault();
 
-		$('.portfolio-loading').show();
 		$('.portfolio-content').load(tg, function(data, status) {
+			$('.portfolio-loading').show();
 			if (status == "success") {
-				$('.portfolio-loading').fadeOut(1000);
+				$(".portfolio-content").hide();
+				loadedImage(data);
 			}
 		});
 	}).on('click', '.btn-close-popup', function (e) {
@@ -256,6 +257,41 @@ if ($('body').hasClass('main')) {
 		} else {
 			$fixedObj.css('margin-right', '');
 			$('body').removeClass('portfolio-opened');
+		}
+	}
+
+	function loadedImage(data){
+		var bgUrl = $('.portfolio-header').css('background-image');
+		var images = $(data).find("img");
+		var imgLoaded = 0;
+		var img;
+
+		var bgLoad = function(){
+			var bgImg = new Image();
+			bgImg.src = bgUrl.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+			bgImg.onload = function() {
+				imageLoad();
+			}
+		}
+
+		var imageLoad = function(){
+			for (var i = 0; i < images.length; i++) {
+				img = new Image();
+				img.src = images[i].src;
+				img.onload = function () {
+					imgLoaded++;
+					if (imgLoaded === images.length) {
+						$('.portfolio-content').show();
+						$('.portfolio-loading').fadeOut(1000);
+					}
+				}
+			}			
+		}
+
+		if (bgUrl) {
+			bgLoad();
+		} else {
+			imageLoad();
 		}
 	}
 
