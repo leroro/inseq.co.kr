@@ -1245,12 +1245,6 @@ div.chat-admin {
 
 .portfolio-header .screen-inner img {
 	width: 100%;
-	height: 100%;
-}
-
-.portfolio-header .screen-wrap > img {
-	width: 100%;
-	height: 100%;
 }
 
 .portfolio-header .screen-wrap .pc-screen {
@@ -1265,77 +1259,6 @@ div.chat-admin {
 }
 
 .portfolio-header .screen-wrap .pc-screen img {
-	width: 100%;
-	height: 100%;
-}
-
-.portfolio-header .tb-m-area {
-	position: relative;
-	padding-bottom: 80%;
-}
-
-.portfolio-header .tb-m-area .tablet {
-	position: absolute;
-	right: 20%;
-	top: 0;
-	width: 48%;
-	height: 89.3%;
-	z-index: 1;
-}
-
-.portfolio-header .tb-m-area .tablet img {
-	width: 100%;
-	height: 100%;
-}
-
-.portfolio-header .tb-m-area .tablet-screen {
-	position: absolute;
-	right: 21.9%;
-	top: 8%;
-	width: 256px;
-	height: 340px;
-}
-
-.portfolio-header .tb-m-area .tablet-screen img {
-	width: 100%;
-	height: 100%;
-}
-
-.portfolio-header .tb-m-area .mobile-area {
-	position: absolute;
-	left: 25%;
-	top: 5%;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	transform: rotate(-31deg);
-	-ms-transform: rotate(-31deg);
-	-webkit-transform: rotate(-31deg);
-}
-
-.portfolio-header .tb-m-area .mobile-area .mobile {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 24%;
-	height: auto;
-	z-index: 1
-}
-
-.portfolio-header .tb-m-area .mobile-area .mobile img {
-	width: 100%;
-	height: 100%;
-}
-
-.portfolio-header .tb-m-area .mobile-area .mobile-screen {
-	position: absolute;
-	left: 1%;
-	top: 6%;
-	width: 19.7%;
-	height: auto;
-}
-
-.portfolio-header .tb-m-area .mobile-area .mobile-screen img {
 	width: 100%;
 	height: 100%;
 }
@@ -1366,15 +1289,6 @@ div.chat-admin {
 	width: 426px;
 	height: 239px;
 }
-
-/*
-	position: absolute;
-	left: 2%;
-	top: 4%;
-	width: 75%;
-	height: 51.5%;
-	padding: 0 7px;
-*/
 
 .portfolio-header .pc-tb-area .pc-screen img {
 	width: 100%;
@@ -1505,7 +1419,7 @@ div.chat-admin {
 	display: block;
 }
 
-.ie9 .portfolio-body .pc .pc-area span:nth-child(3):after {
+.ie9 .portfolio-body .pc .pc-area:before {
 	display: none;
 }
 
@@ -1520,7 +1434,7 @@ div.chat-admin {
 	position: relative;
 }
 
-.ie9 .portfolio-body .pc .pc-area span {
+.ie9 .portfolio-body .pc .pc-area img {
 	width: calc(25% - 4px);
 	float: left;
 	margin: 2px;
@@ -1903,11 +1817,6 @@ div.chat-admin {
 	.portfolio-header .pc-tb-area .pc-screen {
 		width: 75%;
 		height: 51.5%;
-	}
-
-	.portfolio-header .tb-m-area .tablet-screen {
-		width: 44.8%;
-		height: 74%;
 	}
 
 	.portfolio-header .pc-tb-area .tablet-screen {
