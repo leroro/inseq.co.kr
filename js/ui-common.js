@@ -147,7 +147,7 @@ if ($('body').hasClass('main')) {
 		tg.append('<div class="hover-content"><dl><dt class="hover-tit">' + dataTitle + '</dt><dd><p class="date">' + dataDate + '</p><ul class="hash-tag-wrap"></ul></dd></dl></div>');
 
 		$.each(dataImage, function (index, value) {
-			$('.hover-content', tg).before('<img src="/images/portfolio-detail/' + value + '" alt="' + dataTitle + '">');
+			$('.hover-content', tg).before('<img src="images/portfolio-detail/' + value + '" alt="' + dataTitle + '">');
 		});
 		$.each(dataTag, function (index, value) {
 			$('.hash-tag-wrap', tg).append('<li>' + value + '</li>');
