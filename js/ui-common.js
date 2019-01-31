@@ -156,7 +156,7 @@ if ($('body').hasClass('main')) {
 
 	// 포트폴리오 슬라이더
 	$(window).load(function () {
-		if($('.portfolio-list').length) {
+		if ($('.portfolio-list').length) {
 			$('.portfolio-list').owlCarousel({
 				loop: true,
 				fallbackEasing: 'easeOutQuint',
@@ -185,7 +185,7 @@ if ($('body').hasClass('main')) {
 
 	// 포트폴리오 상세 레이어팝업
 	$(function () {
-		$('.main').append('<div class="portfolio-popup"><div class="portfolio-inner"><div class="portfolio-loading"><div class="loader"><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__ball"></div></div></div><div class="portfolio-content"></div><a href="#" class="btn-close-popup">닫기</a></div></div>');
+		$('.main').append('<div class="portfolio-popup"><div class="portfolio-nav"><button type="button" class="btn-prev"><span class="tts">이전</span></button><button type="button" class="btn-next"><span class="tts">다음</span></button></div><div class="portfolio-inner"><div class="portfolio-loading"><div class="loader"><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__bar"></div><div class="loader__ball"></div></div></div><div class="portfolio-container"><div class="portfolio-content"></div><a href="#" class="btn-close-popup">닫기</a></div></div></div>');
 
 		$('.portfolio-popup.show').each(function () {
 			modalOpen($(this), null);
@@ -198,8 +198,10 @@ if ($('body').hasClass('main')) {
 		modalOpen('.portfolio-popup', modalOpener);
 		e.preventDefault();
 
+		$('a.portfolio-open').parents().removeClass('active');
+		$(this).parents().addClass('active');
 		$('.portfolio-loading').show();
-		$('.portfolio-content').load(tg + ' ' + '.portfolio-header, .portfolio-body', function(data, status) {
+		$('.portfolio-content').load(tg + ' ' + '.portfolio-header, .portfolio-body', function (data, status) {
 			if (status == "success") {
 				$(".portfolio-content").hide();
 				loadedImage(data);
@@ -209,7 +211,7 @@ if ($('body').hasClass('main')) {
 		var target = $(this).closest('.portfolio-popup').attr('id');
 		modalClose('#' + target, modalOpener);
 		e.preventDefault();
-
+		
 		$('.portfolio-content').empty();
 	}).on('keydown', '.portfolio-popup .btn-close-popup', function (e) {
 		if (e.keyCode == 9 && !e.shiftKey) { // tab
@@ -221,6 +223,42 @@ if ($('body').hasClass('main')) {
 			e.preventDefault();
 			$(this).siblings('.btn-close-popup').focus();
 		}
+	}).on('click', '.portfolio-nav .btn-prev', function () {
+		var act = $('.portfolio-list .active');
+		var next = act.prev('.portfolio-list .owl-item');
+		$('.portfolio-content').empty();
+		$('.portfolio-list .owl-item').removeClass('active');
+		next.addClass('active');
+		if (next.length === 0) {
+			next = $('.portfolio-list .owl-item:first');
+		}
+
+		var tg = $('a', next).attr('href');
+		$('.portfolio-loading').show();
+		$('.portfolio-content').load(tg + ' ' + '.portfolio-header, .portfolio-body', function (data, status) {
+			if (status == "success") {
+				$(".portfolio-content").hide();
+				loadedImage(data);
+			}
+		});
+	}).on('click', '.portfolio-nav .btn-next', function () {
+		var act = $('.portfolio-list .active');
+		var next = act.next('.portfolio-list .owl-item');
+		$('.portfolio-content').empty();
+		$('.portfolio-list .owl-item').removeClass('active');
+		next.addClass('active');
+		if (next.length === 0) {
+			next = $('.portfolio-list .owl-item:last');
+		}
+
+		var tg = $('a', next).attr('href');
+		$('.portfolio-loading').show();
+		$('.portfolio-content').load(tg + ' ' + '.portfolio-header, .portfolio-body', function (data, status) {
+			if (status == "success") {
+				$(".portfolio-content").hide();
+				loadedImage(data);
+			}
+		});
 	});
 
 	function modalOpen(_target, _opener) {
@@ -242,7 +280,7 @@ if ($('body').hasClass('main')) {
 			modalOpener = null;
 		}
 
-		$(tg).hide().removeClass('show');
+		$(tg).removeClass('show');
 		if (modalOpener !== null) {
 			modalOpener.focus();
 			modalOpener = null;
@@ -262,21 +300,21 @@ if ($('body').hasClass('main')) {
 		}
 	}
 
-	function loadedImage(data){
+	function loadedImage(data) {
 		var bgUrl = $('.portfolio-header').css('background-image');
 		var images = $(data).find("img");
 		var imgLoaded = 0;
 		var img;
 
-		var bgLoad = function(){
+		var bgLoad = function () {
 			var bgImg = new Image();
-			bgImg.src = bgUrl.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
-			bgImg.onload = function() {
+			bgImg.src = bgUrl.match(/\((.*?)\)/)[1].replace(/('|")/g, '');
+			bgImg.onload = function () {
 				imageLoad();
-			}
-		}
+			};
+		};
 
-		var imageLoad = function(){
+		var imageLoad = function () {
 			for (var i = 0; i < images.length; i++) {
 				img = new Image();
 				img.src = images[i].src;
@@ -286,9 +324,9 @@ if ($('body').hasClass('main')) {
 						$('.portfolio-content').show();
 						$('.portfolio-loading').fadeOut(1000);
 					}
-				}
-			}			
-		}
+				};
+			}
+		};
 
 		if (bgUrl) {
 			bgLoad();
@@ -328,4 +366,5 @@ if ($('body').hasClass('main')) {
 			'top': '100%'
 		});
 	});
+
 }

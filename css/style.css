@@ -1054,23 +1054,41 @@ div.chat-admin {
 	bottom: 0;
 	padding: 0 20px;
 	background-color: rgba(0, 0, 0, 0.6);
+	visibility: hidden;
 	z-index: 500;
 	display: none;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+}
+
+.portfolio-popup.show {
+	visibility: visible;
 	overflow-y: scroll;
+}
+
+.portfolio-popup.show .portfolio-inner {
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	opacity: 1;
+}
+
+.portfolio-popup.show .portfolio-nav {
+	display: block;
 }
 
 .portfolio-inner {
 	position: relative;
 	width: 720px;
 	max-width: 100%;
-	min-height: calc(100vh - 25px);
 	margin: 50px auto;
-	color: #fff;
-	text-align: center;
-	border-radius: 30px;
-	overflow: hidden;
-	background-color: #000;
 	z-index: 10;
+	transform: scale(0.7);
+	-webkit-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	opacity: 0;
 }
 
 .portfolio-loading {
@@ -1079,8 +1097,43 @@ div.chat-admin {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	border-radius: 30px;
 	background-color: rgba(0, 0, 0, 0.6);
+	overflow: hidden;
 	z-index: 100;
+}
+
+.portfolio-container {
+	min-height: calc(100vh - 25px);
+	border-radius: 30px;
+	color: #fff;
+	text-align: center;
+	background-color: #000;
+	overflow: hidden;
+}
+
+.portfolio-nav {
+	display: none;
+}
+
+.portfolio-nav button {
+	position: fixed;
+	top: calc(50% - 50px);
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 100;
+}
+
+.portfolio-nav .btn-prev {
+	left: calc(50% - 490px);
+	background-image: url(../images/ico-arr-left-lg.png);
+}
+
+.portfolio-nav .btn-next {
+	right: calc(50% - 472px);
+	background-image: url(../images/ico-arr-right-lg.png);
 }
 
 .portfolio-header {
@@ -1767,6 +1820,20 @@ div.chat-admin {
 
 	.portfolio-inner {
 		background-size: cover;
+	}
+	
+	.portfolio-nav button {
+		width: 80px;
+		height: 80px;
+		background-size: auto 51px;
+	}
+	
+	.portfolio-nav .btn-prev {
+		left: 0;
+	}
+
+	.portfolio-nav .btn-next {
+		right: 0;
 	}
 
 	.portfolio-header {
