@@ -200,7 +200,6 @@ if ($('body').hasClass('main')) {
 
 		$('a.portfolio-open').parents().removeClass('active');
 		$(this).parents().addClass('active');
-		$('.portfolio-loading').show();
 		$('.portfolio-content').load(tg + ' ' + '.portfolio-header, .portfolio-body', function (data, status) {
 			if (status == "success") {
 				$(".portfolio-content").hide();
@@ -228,13 +227,12 @@ if ($('body').hasClass('main')) {
 		var next = act.prev('.portfolio-list .owl-item');
 		$('.portfolio-content').empty();
 		$('.portfolio-list .owl-item').removeClass('active');
-		next.addClass('active');
 		if (next.length === 0) {
-			next = $('.portfolio-list .owl-item:first');
+			next = $('.portfolio-list .owl-item:last').prev();
 		}
+		next.addClass('active');
 
 		var tg = $('a', next).attr('href');
-		$('.portfolio-loading').show();
 		$('.portfolio-content').load(tg + ' ' + '.portfolio-header, .portfolio-body', function (data, status) {
 			if (status == "success") {
 				$(".portfolio-content").hide();
@@ -246,13 +244,12 @@ if ($('body').hasClass('main')) {
 		var next = act.next('.portfolio-list .owl-item');
 		$('.portfolio-content').empty();
 		$('.portfolio-list .owl-item').removeClass('active');
-		next.addClass('active');
 		if (next.length === 0) {
-			next = $('.portfolio-list .owl-item:last');
+			next = $('.portfolio-list .owl-item:first').next();
 		}
+		next.addClass('active');
 
 		var tg = $('a', next).attr('href');
-		$('.portfolio-loading').show();
 		$('.portfolio-content').load(tg + ' ' + '.portfolio-header, .portfolio-body', function (data, status) {
 			if (status == "success") {
 				$(".portfolio-content").hide();
@@ -301,6 +298,8 @@ if ($('body').hasClass('main')) {
 	}
 
 	function loadedImage(data) {
+		$('.portfolio-loading').show();
+
 		var bgUrl = $('.portfolio-header').css('background-image');
 		var images = $(data).find("img");
 		var imgLoaded = 0;
