@@ -64,7 +64,7 @@ a {
 .ci-logo {
 	opacity: 0;
 	margin: 0;
-	width: 120px;
+	width: 130px;
 	font-size: 30px;
 	text-align: center;
 	white-space: nowrap;
@@ -77,9 +77,8 @@ a {
 	text-decoration: none;
 	text-indent: -9999px;
 	overflow: hidden;
-	background: url(../images/logo-inseq-letter.png) no-repeat 0 center;
-	background-size: 200px auto;
-
+	background: url(../images/logo-inseq-header.png) no-repeat 0 center;
+	background-size: 126px auto;
 }
 
 #btn-allmenu,
@@ -146,8 +145,8 @@ a {
 
 #gnb a.active {
 	/*color: #f49ac0;*/
-	color: #da5d92;
-	border-color: #da5d92;
+	color: #dd2e7b;
+	border-color: #dd2e7b;
 }
 
 .title-center {
@@ -171,8 +170,8 @@ a {
 	width: 400px;
 	min-width: 320px;
 	max-width: 100%;
-	height: 200px;
-	margin: -210px auto 0;
+	height: 344px;
+	margin: -242px auto 0;
 	text-align: center;
 }
 
@@ -182,19 +181,21 @@ a {
 	overflow: hidden;
 }
 
-.logo:before {
+/*파티클*/
+canvas {
 	display: block;
+	vertical-align: bottom;
+}
+
+#particles-js {
 	position: absolute;
-	left: -200px;
-	top: -200px;
-	right: -200px;
-	bottom: -200px;
-	content: '';
-	background: url(../images/bg-logo.jpg) no-repeat center center;
-	background-size: 100% auto;
-	animation: logoBgMove 30s;
-	animation-iteration-count: infinite;
-	z-index: 50;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	background-image: url("../images/bg-intro.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 .menu {
@@ -243,7 +244,7 @@ a {
 
 .logo img {
 	position: relative;
-	width: 400px;
+	width: 220px;
 	margin: 0 -10px;
 	max-width: calc(100% + 20px);
 	vertical-align: top;
@@ -252,13 +253,14 @@ a {
 
 .slogan {
 	position: relative;
-	margin-top: -0.1em;
+	margin-top: 15px;
 	padding-bottom: 5px;
-	color: #999;
-	font-size: 19px;
+	color: #fff;
+	font-size: 24px;
 	letter-spacing: 0.02em;
-	background: #111;
 	z-index: 110;
+	font-family: 'NanumS';
+
 }
 
 .slogan strong {
@@ -279,8 +281,20 @@ a {
 	left: 0;
 	right: 0;
 	min-width: 320px;
-	top: 52%;
+	top: 57%;
 	text-align: center;
+
+}
+
+#home .btn:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background: url(../images/btn-round-belt.png) no-repeat center center;
+	width: 300px;
+	height: 80px;
+	margin-left: -150px;
 }
 
 #home .btn {
@@ -290,12 +304,13 @@ a {
 	text-align: center;
 	font-weight: 600;
 	color: #fff;
-	font-size: 21px;
+	font-size: 26px;
 	white-space: nowrap;
-	line-height: 55px;
+	line-height: 80px;
 	border-radius: 30px;
-	background-color: #333;
 	overflow: hidden;
+	position: relative;
+	font-family: 'NanumS';
 }
 
 #home .btn .fa {
@@ -1522,6 +1537,25 @@ div.chat-admin {
 	max-width: 100%;
 }
 
+.btn-top {
+	display: none;
+	position: fixed;
+	right: 30px;
+	bottom: 40px;
+	width: 50px;
+	height: 50px;
+	padding-top: 8px;
+	color: #000;
+	font-size: 11px;
+	font-weight: 600;
+	border: 1px solid #e5e5e5;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 40px;
+	background: #fff url(../images/ico-top-arrow.png) no-repeat center 13px;
+	z-index: 400;
+}
+
 @media only all and (min-width:768px) {
 	.header-hide .header {
 		transform: translateY(-60px);
@@ -1710,6 +1744,28 @@ div.chat-admin {
 	section .inner {
 		padding-left: 30px;
 		padding-right: 30px;
+	}
+
+	#home .inseq-logo {
+		width: 200px;
+		height: auto;
+		margin-top: -185px;
+	}
+
+	#home .btn {
+		font-size: 18px;
+	}
+
+	#home .btn:before {
+		background-size: 70%;
+	}
+
+	.logo img {
+		width: 50%;
+	}
+
+	.slogan {
+		font-size: 20px;
 	}
 
 	.brand .word-seq {
