@@ -796,7 +796,7 @@ section h3 {
 	position: relative;
 	max-width: 1400px;
 	margin: auto;
-	padding: 28px 15px 28px 248px;
+	padding: 28px 15px 28px 220px;
 	text-align: left;
 	color: #bbb;
 	font-size: 13px;
@@ -806,17 +806,17 @@ section h3 {
 .footer .logo-btm {
 	position: absolute;
 	left: 0;
-	top: 32px;
+	top: 36px;
 }
 
 .footer .logo-btm img {
-	height: 50px;
-	vertical-align: top;
+	height: 40px;
+	vertical-align: middle;
 }
 
 .footer address {
 	position: relative;
-	padding-right: 150px;
+	padding-right: 180px;
 	font-style: normal;
 }
 
