@@ -1118,7 +1118,7 @@ div.chat-admin {
 	z-index: 100;
 }
 
-.portfolio-container {
+.portfolio-inner {
 	min-height: calc(100vh - 25px);
 	border-radius: 30px;
 	color: #fff;
