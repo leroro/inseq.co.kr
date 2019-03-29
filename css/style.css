@@ -46,7 +46,7 @@ a {
 	z-index: 700;
 }
 
-.header > * {
+.header>* {
 	position: relative;
 }
 
@@ -156,7 +156,7 @@ a {
 	text-transform: uppercase;
 }
 
-.title-center + .desc {
+.title-center+.desc {
 	margin: -30px 0 40px;
 	opacity: 0.6;
 	font-size: 18px;
@@ -951,8 +951,8 @@ div.chat-admin {
 	border-bottom: 1px solid #ddd;
 }
 
-.table th + th,
-.table td + td {
+.table th+th,
+.table td+td {
 	border-left: 1px solid #ddd;
 }
 
@@ -1067,8 +1067,8 @@ div.chat-admin {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: 0 20px;
-	background-color: rgba(0, 0, 0, 0.6);
+	padding: 0;
+	 background-color: rgba(0, 0, 0, 0.6); 
 	visibility: hidden;
 	z-index: 500;
 	display: none;
@@ -1096,7 +1096,7 @@ div.chat-admin {
 	position: relative;
 	width: 720px;
 	max-width: 100%;
-	margin: 50px auto;
+	 margin: 50px auto; 
 	z-index: 10;
 	transform: scale(0.7);
 	-webkit-transform: scale(0.7);
@@ -1120,7 +1120,7 @@ div.chat-admin {
 
 .portfolio-inner {
 	min-height: calc(100vh - 25px);
-	border-radius: 30px;
+	 border-radius: 30px; 
 	color: #fff;
 	text-align: center;
 	background-color: #000;
@@ -1178,7 +1178,7 @@ div.chat-admin {
 }
 
 .portfolio-header .hash-tag-wrap {
-	margin: 0 0 20px 14px;
+	margin: 0 0 50px 14px;
 }
 
 .portfolio-header .hash-tag-wrap li {
@@ -1281,7 +1281,7 @@ div.chat-admin {
 	vertical-align: middle;
 }
 
-.portfolio-header .view-btn a + a {
+.portfolio-header .view-btn a+a {
 	margin-left: 14px;
 }
 
@@ -1588,7 +1588,7 @@ div.chat-admin {
 	}
 
 	.sub-section h2,
-	.sub-section h2 + * {
+	.sub-section h2+* {
 		margin-top: 0;
 	}
 
@@ -2038,7 +2038,7 @@ div.chat-admin {
 
 	}
 
-	.portfolio-header .view-btn a + a {
+	.portfolio-header .view-btn a+a {
 		margin-left: 5px;
 	}
 
