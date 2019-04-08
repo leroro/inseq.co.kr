@@ -646,7 +646,7 @@ section h3 {
 
 .portfolio-list .hover-content dl .hover-tit {
 	font-size: 30px;
-	padding: 0 40px;
+	padding: 0 35px;
 	margin: 0 0 20px;
 	line-height: 1.3;
 	white-space: normal;
@@ -1068,7 +1068,7 @@ div.chat-admin {
 	right: 0;
 	bottom: 0;
 	padding: 0;
-	 background-color: rgba(0, 0, 0, 0.6); 
+	background-color: rgba(0, 0, 0, 0.6);
 	visibility: hidden;
 	z-index: 500;
 	display: none;
@@ -1096,7 +1096,7 @@ div.chat-admin {
 	position: relative;
 	width: 720px;
 	max-width: 100%;
-	 margin: 50px auto; 
+	margin: 50px auto;
 	z-index: 10;
 	transform: scale(0.7);
 	-webkit-transform: scale(0.7);
@@ -1120,7 +1120,7 @@ div.chat-admin {
 
 .portfolio-inner {
 	min-height: calc(100vh - 25px);
-	 border-radius: 30px; 
+	border-radius: 30px;
 	color: #fff;
 	text-align: center;
 	background-color: #000;
@@ -1183,6 +1183,11 @@ div.chat-admin {
 
 .portfolio-header .hash-tag-wrap li {
 	margin-right: 14px;
+}
+
+.portfolio-header .content+.mobile-area,
+.portfolio-header .content+.screen-wrap {
+	margin-top: 70px;
 }
 
 .hash-tag-wrap {
