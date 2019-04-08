@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>${현재메뉴명} | CLOVER</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css" media="all">
+	<script src="../js/jquery-1.11.3.min.js"></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" media="all">
+	<script src="../js/swiper.min.js"></script>
+
+	<script>
+		// 페이지 개별 스크립트
+		$(document).ready(function() {
+			// 메인 슬라이더
+			var mainMenu = new Swiper('.main-menu', {
+				slidesPerView: 2,
+				freeMode: true,
+				loopedSlides: 2,
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+				speed: 600
+			});
+			var mainContent = new Swiper('.main-content', {
+				thumbs: {
+					swiper: mainMenu
+				},
+				autoHeight: true,
+				speed: 600
+			});
+			mainContent.on('transitionEnd', function () {
+				$('.swiper-slide').scrollTop(0);
+			});
+			
+			// 로딩 레이어
+			$(window).load(function() {    
+				$('#loading').delay(600).fadeOut(1000);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- 로딩 레이어 -->
+	<div id="loading">
+		<div class="loader">
+			<div class="loader-ring"></div>
+			<p>운세를 분석중입니다.</p>
+		</div>
+	</div>
+	<!-- // 로딩 레이어 -->
+	<div class="clover-main">
+		<div class="swiper-container main-menu">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide"><a href="#">띠별운세</a></li>
+				<li class="swiper-slide"><a href="#">프리미엄</a></li>
+			</ul>
+		</div>
+		<div class="swiper-container main-content">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<!-- 띠별운세 콘텐츠 -->
+					<div class="today-zodiac">
+						<div class="user-zodiac">
+							<div class="clearfix">
+								<div class="float-left">
+									<p class="title">띠별 오늘의 운세</p>
+								</div>
+								<div class="float-right">
+									<dl class="date">
+										<dt>풀이날짜</dt>
+										<dd>1982년 2월 25일</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="zodiac-info">
+								<dl>
+									<dt><img src="../images/img-zodiac-pig.png" alt="돼지띠"></dt>
+									<dd>
+										<div class="year">
+											<span>82년생</span>
+										</div>
+										<div class="content">
+											<p class="point">“일복이 많아 건강을 잃을 수 있어요.”</p>
+											<p>풍랑이 불고 비바람이 몰아쳐도 사랑은 영원불변의 항로 표지와 같다. 이겨낼 수 있다.</p>
+										</div>
+									</dd>
+								</dl>
+								<!-- 65세 초과 연령의 경우 -->
+								<!--
+								<dl>
+									<dt><img src="../images/img-zodiac-pig.png" alt="돼지띠"></dt>
+									<dd>
+										<div class="year">
+											<span>46년생</span>
+											<span>58년생</span>
+											<span>70년생</span>
+											<span>82년생</span>
+										</div>
+										<div class="content">
+											<p>“일복이 많아 건강을 잃을 수 있어요.”</p>
+										</div>
+									</dd>
+								</dl>
+								-->
+								<!-- // 65세 초과 연령의 경우 -->
+							</div>
+						</div>
+						<div class="today-zodiac-list">
+							<dl>
+								<dt><img src="../images/img-zodiac-monkey.png" alt="원숭이띠"></dt>
+								<dd>
+									<p class="point">“일복이 많아 건강을 잃을 수 있어요.”</p>
+									<ul class="year-content">
+										<li><span>46년생</span> 땅은 물을 품어주고 물은 땅을 적셔 주니 당신의 매력이 발산된다.</li>
+										<li><span>58년생</span> 당신이 반드시 이겨야 하는 건 아니지만, 진실할 필요는 있다.</li>
+										<li><span>70년생</span> 내 고집을 부리다가 아쉬운 소리를 하게 될 수 있으니 겸손하게 조언을 들어라.</li>
+										<li><span>82년생</span> 풍랑이 불고 비바람이 몰아쳐도 사랑은 영원불변의 항로 표지와 같다. 이겨낼 수 있다.</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><img src="../images/img-zodiac-tiger.png" alt="호랑이띠"></dt>
+								<dd>
+									<p class="point">“일복이 많아 건강을 잃을 수 있어요.”</p>
+									<ul class="year-content">
+										<li><span>46년생</span> 땅은 물을 품어주고 물은 땅을 적셔 주니 당신의 매력이 발산된다.</li>
+										<li><span>58년생</span> 당신이 반드시 이겨야 하는 건 아니지만, 진실할 필요는 있다.</li>
+										<li><span>70년생</span> 내 고집을 부리다가 아쉬운 소리를 하게 될 수 있으니 겸손하게 조언을 들어라.</li>
+										<li><span>82년생</span> 풍랑이 불고 비바람이 몰아쳐도 사랑은 영원불변의 항로 표지와 같다. 이겨낼 수 있다.</li>
+									</ul>
+								</dd>
+							</dl>
+							<!-- 65세 초과 연령의 경우 -->
+							<dl>
+								<dt><img src="../images/img-zodiac-horse.png" alt="말띠"></dt>
+								<dd>
+									<div class="year">
+										<span>46년생</span>
+										<span>58년생</span>
+										<span>70년생</span>
+										<span>82년생</span>
+									</div>
+									<p class="content">“일복이 많아 건강을 잃을 수 있어요.”</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt><img src="../images/img-zodiac-cow.png" alt="소띠"></dt>
+								<dd>
+									<div class="year">
+										<span>46년생</span>
+										<span>58년생</span>
+										<span>70년생</span>
+										<span>82년생</span>
+									</div>
+									<p class="content">“일복이 많아 건강을 잃을 수 있어요.”</p>
+								</dd>
+							</dl>
+							<!-- // 65세 초과 연령의 경우 -->
+						</div>
+					</div>
+					<!-- // 띠별운세 콘텐츠 -->
+				</div>
+				<div class="swiper-slide">
+					<!-- 프리미엄 콘텐츠 -->
+					<div class="premium-fortune">
+						<div class="box fortune-year">
+							<a href="../html/fortune-detail-tojeong.html#tojeong">
+								<p>자평명리학으로 풀어주는 <strong>속 시원한 2019 토정비결</strong></p>
+								<div class="tag-list">
+									<span>연애운</span>
+									<span>건강운</span>
+									<span>직장운</span>
+									<span>재물운</span>
+								</div>
+							</a>
+						</div>
+						<div class="box fortune-life">
+							<a href="../html/fortune-detail-dangsaju.html#dangsaju">
+								<p>내 인생을 한눈에 확인하는 <strong>당사주 평생총운</strong></p>
+								<div class="tag-list">
+									<span>연애운</span>
+									<span>건강운</span>
+									<span>직장운</span>
+									<span>재물운</span>
+								</div>
+							</a>
+						</div>
+						<div class="box fortune-money">
+							<a href="../html/fortune-detail-tojeong.html#tojeong-money">
+								<p>부자가 되고 싶니? <strong>올해 나의 재물운</strong></p>
+							</a>
+						</div>
+						<div class="box fortune-month">
+							<a href="../html/fortune-detail-tojeong.html#tojeong-month-2">
+								<p>사주로 알아보는 <strong>2월 월간운세</strong></p>
+							</a>
+						</div>
+						<div class="fortune-list">
+							<div class="fortune-item fortune-love">
+								<a href="../html/fortune-detail-today.html#today-love">사주로 알아보는 <strong>오늘의 애정운</strong></a>
+							</div>
+							<div class="fortune-item fortune-place">
+								<a href="../html/fortune-detail-today.html#today-dir">어디로 가야할까? <strong>오늘의 장소운</strong></a>
+							</div>
+							<div class="fortune-item fortune-business">
+								<a href="../html/fortune-detail-today.html#today-biz">신묘한 힘의 비즈니스! <strong>오늘의 사업운</strong></a>
+							</div>
+							<div class="fortune-item fortune-color">
+								<a href="../html/fortune-detail-today.html#today-color">성공을 부르는 <strong>오늘의 컬러운</strong></a>
+							</div>
+						</div>
+					</div>
+					<!-- // 프리미엄 콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
