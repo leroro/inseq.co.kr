@@ -996,7 +996,7 @@ div.chat-admin {
 }
 
 .service dl:last-child dd:before {
-	content: '· ';
+	/* content: '· '; */
 }
 
 .tag-list {
