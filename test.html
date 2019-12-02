@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>인시퀀스 - 웹 서비스 개발 전문가 그룹</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        .active {
+            background-color: blue;
+        }
+
+        .text-danger {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="obj1" :class="classObject">ggggggggg</div>
+    <div id="obj2" :class="classObject">ggggggggg</div>
+    <div id="example">
+        <p>원본 메시지: "{{ message }}"</p>
+        <p>역순으로 표시한 메시지: "{{ reversedMessage }}"</p>
+    </div>
+    <div id="obj3" v-if="Math.random() > 0.5">
+        이제 나를 볼 수 있어요
+    </div>
+    <div v-else>
+        이제는 안보입니다
+    </div>
+    <!-- JS -->
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#example',
+            data: {
+                message: '안녕하세요'
+            },
+            computed: {
+                // 계산된 getter
+                reversedMessage: function () {
+                    // `this` 는 vm 인스턴스를 가리킵니다.
+                    return this.message.split('').reverse().join('')
+                }
+            }
+        });
+        var vm1 = new Vue({
+            el: '#obj1',
+            data: {
+                active: false,
+                'text-danger': true
+            },
+            computed: {
+                classObject: function () {
+                    return {
+                        active: this.isActive && !this.error,
+                        'text-danger': this.error && this.error.type === 'fatal'
+                    }
+                }
+            }
+        });
+        var vm2 = new Vue({
+            el: '#obj2',
+            data: {
+                classObject: {
+                    active: false,
+                    'text-danger': true
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

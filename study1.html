@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>기초 1 show hide</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+    <div id="vue-app">
+        <input-holder @message="changeMsg" :msg="msg" :msg-active="msgActive" :button-handler="buttonHandler"></input-holder>
+        <msg-holder :msg="msg" :msg-active="msgActive"></msg-holder>
+        <!-- <div v-if="msgActive">
+            {{msg}}
+        </div> -->
+    </div>
+    <!-- JS -->
+    <script src="js/vue.js"></script>
+    <script>
+
+        Vue.component('msg-holder', {
+            props: ['msg', 'msgActive'],
+            template: '<div v-if="msgActive">{{msg}}</div>'
+        });
+
+        Vue.component('input-holder', {
+            props: ['msg', 'msgActive', 'buttonHandler'],
+            template: 
+            `
+            <div>
+                <input type="text" :value="msg" @input="$emit('message', $event.target.value)">
+                <button  @click="buttonHandler">
+                    <span v-if="msgActive">hide</span>
+                    <span v-else>show</span>
+                </button>
+            </div>
+            `,
+            methods: {
+               
+            }
+        });
+        var vueApp = new Vue({
+            el: '#vue-app',
+            data: {
+                msg: 'msg2',
+                msgActive: true
+            },
+            methods: {
+                buttonHandler: function() {
+                    this.msgActive = !this.msgActive;
+                },
+                changeMsg: function(msg) {
+                    this.msg=msg;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
