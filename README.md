@@ -3,6 +3,8 @@
 - 고도화 구현 @kangeh89 
 - 운영서버 반영 @leroro 
 
+### IA 
+-  https://docs.google.com/spreadsheets/d/1cJIGI4upFWOc0dvx-_RhrAja6LCtccUuGZ0VDE6Yfx4/edit#gid=2038438827
 ### 자료
 - 구글 드라이브 : https://drive.google.com/drive/folders/1Lx0U0xtIOyKM3StQQJ8BsmFGJmmFS3wG?usp=sharing
 
