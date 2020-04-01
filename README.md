@@ -3,6 +3,9 @@
 - 고도화 구현 @kangeh89 
 - 운영서버 반영 @leroro 
 
+
+### 제플린 프로젝트 주소 
+- https://app.zeplin.io/project/5e69f153282c9317a2174cb8
 ### IA 
 -  https://docs.google.com/spreadsheets/d/1cJIGI4upFWOc0dvx-_RhrAja6LCtccUuGZ0VDE6Yfx4/edit#gid=2038438827
 ### 자료
