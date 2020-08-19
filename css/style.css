@@ -1053,7 +1053,8 @@ div.chat-admin {
 
 .location-address {
 	margin-top: 0;
-	font-size: 25px;
+	font-size: 22px;
+	line-height: 1.4;
 }
 
 .traffic dt {
