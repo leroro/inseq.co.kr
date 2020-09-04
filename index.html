@@ -352,7 +352,7 @@
 		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 		// 마커가 표시될 위치입니다 
-		var markerPosition = new kakao.maps.LatLng(37.51879316226428, 126.88628251682995);
+		var markerPosition = new kakao.maps.LatLng(37.51920761203551, 126.88627057602054);
 
 		// 마커를 생성합니다
 		var marker = new kakao.maps.Marker({
@@ -360,14 +360,14 @@
 		});
 
 		// 마커가 지도 위에 표시되도록 설정합니다
-		// marker.setMap(map);
+		marker.setMap(map);
 
 		var iwContent = '<p class="location-marker">(주)인시퀀스</p>',
 			iwRemoveable = true;
 
 		var infowindow = new daum.maps.InfoWindow({
 			content: iwContent,
-			// removable: iwRemoveable
+			removable: iwRemoveable
 		});
 
 		infowindow.open(map, marker);

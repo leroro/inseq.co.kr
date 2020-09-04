@@ -491,9 +491,11 @@ canvas {
 
 .location-marker {
 	margin: 0;
-	padding: 10px 30px;
+	padding: 10px 20px;
 	font-weight: 600;
 	font-size: 18px;
+	line-height: 1.2;
+	color: #333;
 	text-align: center;
 }
 
