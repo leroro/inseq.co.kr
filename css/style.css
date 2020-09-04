@@ -491,9 +491,10 @@ canvas {
 
 .location-marker {
 	margin: 0;
-	padding: 10px 40px;
+	padding: 10px 30px;
 	font-weight: 600;
 	font-size: 18px;
+	text-align: center;
 }
 
 section .inner {
