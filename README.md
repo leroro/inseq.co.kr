@@ -1,3 +1,5 @@
+http://dev.inseq.co.kr:7773/index.html
+
 ### 담당자
 - 콘텐츠 운영 및 관리 @dudutj0202
 - 고도화 구현 @kangeh89 
