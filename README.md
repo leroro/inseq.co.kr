@@ -15,6 +15,7 @@ http://dev.inseq.co.kr:7773/index.html
 - IA : https://docs.google.com/spreadsheets/d/1cJIGI4upFWOc0dvx-_RhrAja6LCtccUuGZ0VDE6Yfx4/edit#gid=2038438827
 - 화면설계서 링크 : https://drive.google.com/file/d/1GzeTieGYGqBDZoS6Vho2vCr4yRx7MUsE/view?usp=sharing
 - 제플린 프로젝트 주소(이전 기획 자료) :  https://app.zeplin.io/project/5e69f153282c9317a2174cb8
+- 피그마 프로젝트 주소 : https://www.figma.com/file/VRTLFq0mw5h4voSUQii1oz/inseq
 
 
 ### 프로젝트 DB
