@@ -5,9 +5,8 @@ http://dev.inseq.co.kr:7773/index.html
 
 ### 담당자
 - 기획 및 데이터 @dksxotkd1220 
-- 콘텐츠 운영 및 관리 @namu 
+- 콘텐츠 운영 및 관리
 - 고도화 구현 @leroro 
-- 개발 @sos9215  
 - 운영서버 반영 @leroro 
 
 ### 자료
