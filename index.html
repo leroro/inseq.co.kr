@@ -5,7 +5,7 @@
 <!--<![endif]-->
 
 <head>
-	<title>인시퀀스 - 웹 서비스 개발 전문가 그룹</title>
+	<title>서버 일시 중단 안내 | 인시퀀스</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -20,7 +20,7 @@
 	<meta property="og:site_name" content="인시퀀스">
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
 	<link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
 		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -31,6 +31,7 @@
 		}
 		.d-flex {
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			height: 100%;
@@ -45,12 +46,23 @@
 			.d-flex .d-down-sm { display: none;}
 			.d-flex .d-up-sm { display: block; width: 100%; max-width: 327px;}
 		}
+		.logo {
+			display: none;
+			flex: 0 0 auto;
+			margin-top: 15px;
+		}
+		.logo img {
+			height: 22px;
+		}
 	</style>
 </head>
 
 <body class="main d-flex">
 	<img class="d-down-sm" src="images/img-notice-pc.png" alt="일시중단안내 pc">
 	<img class="d-up-sm" src="images/img-notice-mobile.png" alt="일시중단안내 mobile">
+	<div class="logo">
+		<img src="images/logo@2x.png" alt="inseq">
+	</div>
 </body>
 
 </html>
